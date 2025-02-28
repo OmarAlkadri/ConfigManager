@@ -1,0 +1,227 @@
+2025-02-28 18:00:53.130 +03:00 [INF] Now listening on: http://localhost:5163
+2025-02-28 18:00:53.167 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 18:00:53.167 +03:00 [INF] Hosting environment: Development
+2025-02-28 18:00:53.168 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 18:06:38.086 +03:00 [INF] Application is shutting down...
+2025-02-28 23:37:42.335 +03:00 [INF] Now listening on: http://localhost:5163
+2025-02-28 23:37:42.364 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:37:42.365 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:37:42.365 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:37:44.624 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5163/ - null null
+2025-02-28 23:37:44.655 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-02-28 23:37:44.689 +03:00 [INF] HTTP GET / responded 404 in 0.5551 ms
+2025-02-28 23:37:44.693 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5163/ - 404 0 null 69.3064ms
+2025-02-28 23:37:44.695 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5163/, Response status code: 404
+2025-02-28 23:37:56.730 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5163/ - null null
+2025-02-28 23:37:56.733 +03:00 [INF] HTTP GET / responded 404 in 0.0573 ms
+2025-02-28 23:37:56.734 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5163/ - 404 0 null 4.34ms
+2025-02-28 23:37:56.735 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5163/, Response status code: 404
+2025-02-28 23:38:29.239 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5163/ - null null
+2025-02-28 23:38:29.244 +03:00 [INF] HTTP GET / responded 404 in 0.0210 ms
+2025-02-28 23:38:29.244 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5163/ - 404 0 null 5.2649ms
+2025-02-28 23:38:29.244 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5163/, Response status code: 404
+2025-02-28 23:43:13.837 +03:00 [INF] Now listening on: http://localhost:5163
+2025-02-28 23:43:13.866 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:43:13.867 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:43:13.867 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:43:34.203 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5163/ - null null
+2025-02-28 23:43:34.234 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-02-28 23:43:34.265 +03:00 [INF] HTTP GET / responded 404 in 0.4048 ms
+2025-02-28 23:43:34.269 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5163/ - 404 0 null 66.9301ms
+2025-02-28 23:43:34.272 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5163/, Response status code: 404
+2025-02-28 23:43:48.003 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5163/ - null null
+2025-02-28 23:43:48.008 +03:00 [INF] HTTP GET / responded 404 in 0.0269 ms
+2025-02-28 23:43:48.008 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5163/ - 404 0 null 5.4504ms
+2025-02-28 23:43:48.009 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5163/, Response status code: 404
+2025-02-28 23:43:52.394 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5163/ - null null
+2025-02-28 23:43:52.396 +03:00 [INF] HTTP GET / responded 404 in 0.0193 ms
+2025-02-28 23:43:52.397 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5163/ - 404 0 null 2.5363ms
+2025-02-28 23:43:52.397 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5163/, Response status code: 404
+2025-02-28 23:43:56.002 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5163/ - null null
+2025-02-28 23:43:56.003 +03:00 [INF] HTTP GET / responded 404 in 0.0229 ms
+2025-02-28 23:43:56.004 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5163/ - 404 0 null 1.6707ms
+2025-02-28 23:43:56.004 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5163/, Response status code: 404
+2025-02-28 23:44:02.969 +03:00 [INF] Application is shutting down...
+2025-02-28 23:44:21.597 +03:00 [INF] Now listening on: http://localhost:5163
+2025-02-28 23:44:21.629 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:44:21.630 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:44:21.630 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:44:23.747 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5163/ - null null
+2025-02-28 23:44:23.783 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-02-28 23:44:23.820 +03:00 [INF] HTTP GET / responded 404 in 0.3816 ms
+2025-02-28 23:44:23.824 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:5163/ - 404 0 null 78.0268ms
+2025-02-28 23:44:23.827 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:5163/, Response status code: 404
+2025-02-28 23:45:08.338 +03:00 [INF] Application is shutting down...
+2025-02-28 23:45:10.499 +03:00 [INF] Now listening on: http://localhost:8081
+2025-02-28 23:45:10.533 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:45:10.533 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:45:10.533 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:45:14.783 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8081/ - null null
+2025-02-28 23:45:14.813 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-02-28 23:45:14.844 +03:00 [INF] HTTP GET / responded 404 in 0.5251 ms
+2025-02-28 23:45:14.849 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8081/ - 404 0 null 66.9201ms
+2025-02-28 23:45:14.851 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:8081/, Response status code: 404
+2025-02-28 23:45:17.189 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8081/ - null null
+2025-02-28 23:45:17.191 +03:00 [INF] HTTP GET / responded 404 in 0.1524 ms
+2025-02-28 23:45:17.192 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8081/ - 404 0 null 3.5144ms
+2025-02-28 23:45:17.193 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:8081/, Response status code: 404
+2025-02-28 23:46:08.729 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8081/weatherforecast - null null
+2025-02-28 23:46:08.732 +03:00 [INF] Executing endpoint 'HTTP: GET /weatherforecast'
+2025-02-28 23:46:08.748 +03:00 [INF] Executed endpoint 'HTTP: GET /weatherforecast'
+2025-02-28 23:46:08.748 +03:00 [INF] HTTP GET /weatherforecast responded 200 in 16.2600 ms
+2025-02-28 23:46:08.748 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8081/weatherforecast - 200 null application/json; charset=utf-8 19.5285ms
+2025-02-28 23:46:09.371 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8081/favicon.ico - null null
+2025-02-28 23:46:09.372 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0192 ms
+2025-02-28 23:46:09.372 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8081/favicon.ico - 404 0 null 1.6768ms
+2025-02-28 23:46:09.373 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://127.0.0.1:8081/favicon.ico, Response status code: 404
+2025-02-28 23:46:23.646 +03:00 [INF] Application is shutting down...
+2025-02-28 23:46:39.026 +03:00 [INF] Now listening on: http://localhost:8081
+2025-02-28 23:46:39.059 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:46:39.060 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:46:39.060 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:46:43.643 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-02-28 23:46:43.670 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-02-28 23:46:43.700 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-02-28 23:46:43.714 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-02-28 23:46:43.812 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-28 23:46:43.836 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 119.6292ms
+2025-02-28 23:46:43.838 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-02-28 23:46:43.839 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 139.9543 ms
+2025-02-28 23:46:43.841 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 198.2445ms
+2025-02-28 23:47:11.222 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-02-28 23:47:11.225 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-02-28 23:47:11.226 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-02-28 23:47:11.227 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-28 23:47:11.227 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.2479ms
+2025-02-28 23:47:11.227 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-02-28 23:47:11.228 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.3219 ms
+2025-02-28 23:47:11.228 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 6.9706ms
+2025-02-28 23:47:17.430 +03:00 [INF] Application is shutting down...
+2025-02-28 23:50:58.695 +03:00 [INF] Now listening on: http://localhost:8081
+2025-02-28 23:50:58.725 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:50:58.726 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:50:58.726 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:51:03.303 +03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-28 23:51:03.401 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:8081: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-02-28 23:51:13.789 +03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-28 23:51:13.852 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:8081: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-02-28 23:53:18.324 +03:00 [INF] Now listening on: http://localhost:8081
+2025-02-28 23:53:18.354 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:53:18.354 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:53:18.354 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:56:04.889 +03:00 [INF] Application is shutting down...
+ficate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-28 23:53:23.183 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:8081: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-02-28 23:54:11.706 +03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-02-28 23:54:11.765 +03:00 [INF] Now listening on: https://localhost:7205
+2025-02-28 23:54:11.767 +03:00 [INF] Now listening on: http://localhost:8082
+2025-02-28 23:54:11.769 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:54:11.769 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:54:11.769 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:54:24.000 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-02-28 23:54:24.061 +03:00 [INF] HTTP GET / responded 404 in 0.4618 ms
+2025-02-28 23:54:24.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 65.5973ms
+2025-02-28 23:54:24.072 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-02-28 23:54:25.128 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-02-28 23:54:25.131 +03:00 [INF] HTTP GET / responded 404 in 0.0362 ms
+2025-02-28 23:54:25.132 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 3.954ms
+2025-02-28 23:54:25.133 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-02-28 23:55:16.725 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8082/ - null null
+2025-02-28 23:55:16.730 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8082/ - 307 0 null 4.9125ms
+2025-02-28 23:55:32.872 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8082/ - null null
+2025-02-28 23:55:32.873 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8082/ - 307 0 null 0.6193ms
+2025-02-28 23:55:35.789 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8082/weatherforecast - null null
+2025-02-28 23:55:35.791 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8082/weatherforecast - 307 0 null 2.5893ms
+2025-02-28 23:56:02.280 +03:00 [INF] Now listening on: http://localhost:8082
+2025-02-28 23:56:02.308 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:56:02.308 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:56:02.309 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:56:45.283 +03:00 [INF] Application is shutting down...
+2025-02-28 23:56:53.441 +03:00 [INF] Now listening on: http://localhost:8081
+2025-02-28 23:56:53.470 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-28 23:56:53.470 +03:00 [INF] Hosting environment: Development
+2025-02-28 23:56:53.471 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-02-28 23:57:15.895 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-02-28 23:57:15.924 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-02-28 23:57:15.954 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-02-28 23:57:15.970 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-02-28 23:57:16.070 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-28 23:57:16.096 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 123.3891ms
+2025-02-28 23:57:16.097 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-02-28 23:57:16.098 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 144.0546 ms
+2025-02-28 23:57:16.101 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 206.6797ms

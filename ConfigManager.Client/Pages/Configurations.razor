@@ -1,0 +1,191 @@
+@page "/configurations"
+@using ConfigManager.Domain.Entities
+@using ConfigManager.Domain.ValueObjects
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<PageTitle>Configurations</PageTitle>
+
+<h3 class="text-primary">Configuration Settings</h3>
+
+<div class="mb-3 d-flex">
+    <input type="text" class="form-control me-2" placeholder="Search by name..." bind="@searchQuery" />
+    <button class="btn btn-primary" @onclick="SearchConfigurations">Search</button>
+</div>
+
+@if (configurations == null)
+{
+    <div class="text-center mt-4">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th>Type</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var config in configurations)
+                {
+                    <tr>
+                        <td>@config.Name</td>
+                        <td>@config.Value</td>
+                        <td>@config.Type</td>
+                        <td class="text-center">
+                            <button class="btn btn-warning btn-sm me-2" @onclick="() => OpenEditModal(config)">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </button>
+                            <button class="btn btn-danger btn-sm" @onclick="() => OpenDeleteModal(config)">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@if (isEditModalOpen)
+{
+    <div class="modal fade show d-block" id="editModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Configuration</h5>
+                    <button type="button" class="btn-close" @onclick="CloseEditModal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" bind="@selectedConfig.Name" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Value</label>
+                        <input type="text" class="form-control" bind="@selectedConfig.Value">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Type</label>
+                        <input type="text" class="form-control" bind="@selectedConfig.Type" disabled>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">Close</button>
+                    <button type="button" class="btn btn-primary" @onclick="SaveChanges">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<ConfigurationSetting> configurations = new();
+    private string errorMessage;
+    private bool isEditModalOpen = false;
+    private bool isDeleteModalOpen = false;
+    private ConfigurationSetting selectedConfig = new("", SettingType.String, "", true, "SERVICE-A");
+    private string searchQuery = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadConfigurations();
+    }
+
+    private async Task LoadConfigurations()
+    {
+        try
+        {
+            var response = await Http.GetAsync("api/configurations/SERVICE-A");
+            if (response.IsSuccessStatusCode)
+            {
+                configurations = await response.Content.ReadFromJsonAsync<List<ConfigurationSetting>>() ?? new();
+            }
+            else
+            {
+                errorMessage = $"Error fetching configurations: {response.StatusCode} {response.ReasonPhrase}";
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            errorMessage = $"Error fetching configurations: {ex.Message}";
+        }
+    }
+
+    private async Task SearchConfigurations()
+    {
+        if (string.IsNullOrWhiteSpace(searchQuery))
+        {
+            await LoadConfigurations();
+        }
+        else
+        {
+            try
+            {
+                configurations = await
+                Http.GetFromJsonAsync<List<ConfigurationSetting>>($"api/configurations/SERVICE-A?search={searchQuery}") ?? new();
+            }
+            catch (HttpRequestException ex)
+            {
+                errorMessage = $"Error searching configurations: {ex.Message}";
+            }
+        }
+    }
+
+    private async Task OpenEditModal(ConfigurationSetting config)
+    {
+        selectedConfig = new ConfigurationSetting(config.Name, config.Type, config.Value, config.IsActive,
+        config.ApplicationName);
+        isEditModalOpen = true;
+        await JS.InvokeVoidAsync("showModal", "editModal");
+        StateHasChanged();
+    }
+
+    private async Task CloseEditModal()
+    {
+        isEditModalOpen = false;
+        await JS.InvokeVoidAsync("hideModal", "editModal");
+        StateHasChanged();
+    }
+
+    private async Task SaveChanges()
+    {
+        var response = await Http.PutAsJsonAsync($"api/configurations/{selectedConfig.Name}", selectedConfig);
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadConfigurations();
+            await CloseEditModal();
+        }
+    }
+
+    private void OpenDeleteModal(ConfigurationSetting config)
+    {
+        selectedConfig = config;
+        isDeleteModalOpen = true;
+        StateHasChanged();
+    }
+
+    private async Task ConfirmDelete()
+    {
+        var response = await Http.DeleteAsync($"api/configurations/{selectedConfig.Name}");
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadConfigurations();
+        }
+        CloseDeleteModal();
+    }
+
+    private void CloseDeleteModal()
+    {
+        isDeleteModalOpen = false;
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,17 @@
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Infrastructure.deps.json
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Infrastructure.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Infrastructure.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Application.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Domain.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Application.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/bin/Release/net8.0/ConfigManager.Domain.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.csproj.AssemblyReference.cache
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.AssemblyInfoInputs.cache
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.AssemblyInfo.cs
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.csproj.CoreCompileInputs.cache
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.csproj.CopyComplete
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/refint/ConfigManager.Infrastructure.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ConfigManager.Infrastructure.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/Release/net8.0/ref/ConfigManager.Infrastructure.dll

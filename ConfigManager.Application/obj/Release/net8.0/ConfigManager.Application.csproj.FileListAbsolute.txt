@@ -1,0 +1,15 @@
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/bin/Release/net8.0/ConfigManager.Application.deps.json
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/bin/Release/net8.0/ConfigManager.Application.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/bin/Release/net8.0/ConfigManager.Application.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/bin/Release/net8.0/ConfigManager.Domain.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/bin/Release/net8.0/ConfigManager.Domain.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.csproj.AssemblyReference.cache
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.AssemblyInfoInputs.cache
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.AssemblyInfo.cs
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.csproj.CoreCompileInputs.cache
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.csproj.CopyComplete
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/refint/ConfigManager.Application.dll
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ConfigManager.Application.pdb
+/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/Release/net8.0/ref/ConfigManager.Application.dll

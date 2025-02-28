@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "MiVU1YkDMQdmG9rTAhddptp5Sqo4wy0uxM60CRGiXsNGsukiFjjmyaUs7eyHaNkGoyIfwTiNFVWj/1JqAcN3bg==",
+  "success": true,
+  "projectFilePath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/ConfigManager.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/omara/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.2/microsoft.extensions.caching.abstractions.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/microsoft.extensions.caching.memory/9.0.2/microsoft.extensions.caching.memory.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.2/microsoft.extensions.dependencyinjection.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.2/microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.2/microsoft.extensions.logging.abstractions.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/microsoft.extensions.options/9.0.2/microsoft.extensions.options.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/microsoft.extensions.primitives/9.0.2/microsoft.extensions.primitives.9.0.2.nupkg.sha512",
+    "/home/omara/.nuget/packages/system.diagnostics.diagnosticsource/9.0.2/system.diagnostics.diagnosticsource.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  #configmanager:
+  #  build:
+  #    context: ..
+  #    dockerfile: docker/Dockerfile
+  #  container_name: configmanager_api
+  #  ports:
+  #    - "8080:8080"  # تأكد من مطابقة المنافذ هنا
+  #  restart: always
+  #  environment:
+  #    Application__Name: "SERVICE-A"
+  #    Redis__ConnectionString: "redis:6379"
+  #    RabbitMQ__ConnectionString: "amqp://guest:guest@rabbitmq:5672/"
+  #  depends_on:
+  #    - redis
+  #    - rabbitmq
+  #  networks:
+  #    - blazor_network
+#
+  #client:
+  #  build:
+  #    context: ..
+  #    dockerfile: docker/Client.Dockerfile
+  #  container_name: blazor_client
+  #  ports:
+  #    - "5001:80"  # أضف هذا السطر لتوجيه الواجهة إلى 8081
+  #  depends_on:
+  #    - configmanager
+  #  networks:
+  #    - blazor_network
+  #  volumes:
+  #    - .:/app
+
+
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - blazor_network
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - blazor_network
+
+networks:
+  blazor_network:
+    driver: bridge

@@ -1,0 +1,943 @@
+2025-03-01 00:00:05.000 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:00:05.008 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:00:05.009 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:00:05.011 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:00:05.012 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 2.4619ms
+2025-03-01 00:00:05.012 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:00:05.013 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 5.0236 ms
+2025-03-01 00:00:05.014 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 15.1393ms
+2025-03-01 00:01:13.792 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 00:01:13.822 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 00:01:13.822 +03:00 [INF] Hosting environment: Development
+2025-03-01 00:01:13.823 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 00:01:18.916 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:01:18.955 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 00:01:19.001 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:19.023 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:01:19.156 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:01:19.187 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 161.3396ms
+2025-03-01 00:01:19.189 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:19.192 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 192.2236 ms
+2025-03-01 00:01:19.195 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 280.3765ms
+2025-03-01 00:01:24.376 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:01:24.379 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:24.379 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:01:24.380 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:01:24.380 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.1034ms
+2025-03-01 00:01:24.381 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:24.381 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.8465 ms
+2025-03-01 00:01:24.381 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 5.0804ms
+2025-03-01 00:01:25.238 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:01:25.240 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:25.240 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:01:25.241 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:01:25.241 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.8778ms
+2025-03-01 00:01:25.241 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:25.241 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.5915 ms
+2025-03-01 00:01:25.242 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.7063ms
+2025-03-01 00:01:25.696 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:01:25.697 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:25.697 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:01:25.697 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:01:25.698 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5809ms
+2025-03-01 00:01:25.698 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:25.698 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2732 ms
+2025-03-01 00:01:25.698 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.1795ms
+2025-03-01 00:01:26.001 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:01:26.002 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:26.002 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:01:26.003 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:01:26.003 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9677ms
+2025-03-01 00:01:26.004 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:26.004 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.2722 ms
+2025-03-01 00:01:26.005 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.8745ms
+2025-03-01 00:01:27.349 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:01:27.350 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:27.350 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:01:27.351 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:01:27.351 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5076ms
+2025-03-01 00:01:27.351 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:01:27.351 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2006 ms
+2025-03-01 00:01:27.352 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.0239ms
+2025-03-01 00:03:14.534 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:03:14.535 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:03:14.535 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:03:14.535 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:03:14.536 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4801ms
+2025-03-01 00:03:14.536 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:03:14.536 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0443 ms
+2025-03-01 00:03:14.536 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.5385ms
+2025-03-01 00:03:19.660 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:03:19.661 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:03:19.661 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:03:19.661 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.EmptyPartition`1[[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:03:19.661 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.3835ms
+2025-03-01 00:03:19.662 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:03:19.662 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.9219 ms
+2025-03-01 00:03:19.662 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.6236ms
+2025-03-01 00:05:56.778 +03:00 [INF] Application is shutting down...
+2025-03-01 00:09:01.549 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 00:09:01.589 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 00:09:01.590 +03:00 [INF] Hosting environment: Development
+2025-03-01 00:09:01.590 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 00:09:02.600 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/ - null null
+2025-03-01 00:09:02.653 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 00:09:02.721 +03:00 [INF] HTTP GET / responded 404 in 0.6999 ms
+2025-03-01 00:09:02.727 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/ - 404 0 null 128.9049ms
+2025-03-01 00:09:02.730 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8081/, Response status code: 404
+2025-03-01 00:09:10.622 +03:00 [INF] Application is shutting down...
+ficate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2025-03-01 00:09:05.520 +03:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:8081: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-03-01 00:16:43.924 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 00:16:43.956 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 00:16:43.957 +03:00 [INF] Hosting environment: Development
+2025-03-01 00:16:43.957 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 00:17:38.413 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:17:38.440 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 00:17:38.470 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:17:38.485 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:17:38.584 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:17:38.614 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 126.0408ms
+2025-03-01 00:17:38.615 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:17:38.616 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 146.4648 ms
+2025-03-01 00:17:38.619 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 206.9556ms
+2025-03-01 00:17:38.826 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:17:38.829 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:17:38.830 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:17:38.831 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:17:38.832 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 2.082ms
+2025-03-01 00:17:38.832 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:17:38.832 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 3.2951 ms
+2025-03-01 00:17:38.833 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 7.0775ms
+2025-03-01 00:17:46.467 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:17:46.469 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:17:46.469 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:17:46.470 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:17:46.471 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.1965ms
+2025-03-01 00:17:46.471 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:17:46.471 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.3752 ms
+2025-03-01 00:17:46.472 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 4.7904ms
+2025-03-01 00:20:02.670 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:20:02.671 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:20:02.671 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:20:02.672 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:20:02.672 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.8352ms
+2025-03-01 00:20:02.673 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:20:02.673 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.9098 ms
+2025-03-01 00:20:02.673 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.2209ms
+2025-03-01 00:20:03.996 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:20:03.997 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:20:03.997 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:20:03.997 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:20:03.998 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6186ms
+2025-03-01 00:20:03.998 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:20:03.998 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2344 ms
+2025-03-01 00:20:03.999 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.8913ms
+2025-03-01 00:21:53.119 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 00:21:53.147 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 00:21:53.149 +03:00 [INF] Hosting environment: Development
+2025-03-01 00:21:53.149 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 00:23:38.019 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:23:38.046 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 00:23:38.077 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:38.092 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:23:38.194 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:23:38.224 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 129.229ms
+2025-03-01 00:23:38.226 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:38.227 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 150.7860 ms
+2025-03-01 00:23:38.230 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 212.0044ms
+2025-03-01 00:23:39.691 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:23:39.694 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:39.694 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:23:39.695 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:23:39.696 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.6588ms
+2025-03-01 00:23:39.696 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:39.696 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.8031 ms
+2025-03-01 00:23:39.697 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 6.4576ms
+2025-03-01 00:23:41.752 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:23:41.754 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:41.754 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:23:41.755 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:23:41.755 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9647ms
+2025-03-01 00:23:41.756 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:41.756 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.9078 ms
+2025-03-01 00:23:41.756 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.8482ms
+2025-03-01 00:23:44.180 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:23:44.180 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:44.181 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:23:44.181 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:23:44.182 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.1267ms
+2025-03-01 00:23:44.182 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:44.182 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.9099 ms
+2025-03-01 00:23:44.183 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.7446ms
+2025-03-01 00:23:44.873 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:23:44.874 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:44.874 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:23:44.874 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:23:44.875 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5019ms
+2025-03-01 00:23:44.875 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:23:44.875 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0984 ms
+2025-03-01 00:23:44.875 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9383ms
+2025-03-01 00:26:53.217 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:26:53.218 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:26:53.219 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:26:53.219 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:26:53.220 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.8244ms
+2025-03-01 00:26:53.220 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:26:53.220 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.7288 ms
+2025-03-01 00:26:53.220 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.5351ms
+2025-03-01 00:27:30.613 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:27:30.614 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:27:30.614 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:27:30.615 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:27:30.616 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.2799ms
+2025-03-01 00:27:30.616 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:27:30.616 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.4236 ms
+2025-03-01 00:27:30.617 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 4.0885ms
+2025-03-01 00:27:32.101 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:27:32.101 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:27:32.102 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:27:32.102 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:27:32.102 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5458ms
+2025-03-01 00:27:32.103 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:27:32.103 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4200 ms
+2025-03-01 00:27:32.103 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2453ms
+2025-03-01 00:30:16.795 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:30:16.797 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:30:16.798 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:30:16.804 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:30:16.805 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 6.2802ms
+2025-03-01 00:30:16.805 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:30:16.806 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 8.2983 ms
+2025-03-01 00:30:16.806 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 11.3882ms
+2025-03-01 00:30:24.979 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:30:24.979 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:30:24.980 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:30:24.980 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:30:24.980 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5505ms
+2025-03-01 00:30:24.981 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:30:24.981 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.5785 ms
+2025-03-01 00:30:24.981 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.5859ms
+2025-03-01 00:30:56.890 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:30:56.891 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:30:56.891 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:30:56.892 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:30:56.892 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7351ms
+2025-03-01 00:30:56.892 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:30:56.893 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.8076 ms
+2025-03-01 00:30:56.893 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.8467ms
+2025-03-01 00:31:08.157 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:31:08.159 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:31:08.160 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:31:08.161 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:31:08.162 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 2.0634ms
+2025-03-01 00:31:08.163 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:31:08.163 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 3.8782 ms
+2025-03-01 00:31:08.163 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 5.93ms
+2025-03-01 00:31:09.549 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:31:09.550 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:31:09.550 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:31:09.551 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:31:09.552 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.3645ms
+2025-03-01 00:31:09.553 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:31:09.553 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 3.0440 ms
+2025-03-01 00:31:09.553 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 4.682ms
+2025-03-01 00:31:13.206 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:31:13.206 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:31:13.206 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:31:13.207 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:31:13.207 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6997ms
+2025-03-01 00:31:13.207 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:31:13.208 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4430 ms
+2025-03-01 00:31:13.208 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.1881ms
+2025-03-01 00:36:06.559 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:36:06.560 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:36:06.561 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:36:06.564 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:36:06.565 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 3.7183ms
+2025-03-01 00:36:06.565 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:36:06.565 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 5.0013 ms
+2025-03-01 00:36:06.566 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 6.8564ms
+2025-03-01 00:36:16.599 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:36:16.600 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:36:16.600 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:36:16.601 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:36:16.601 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6387ms
+2025-03-01 00:36:16.601 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:36:16.601 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4507 ms
+2025-03-01 00:36:16.602 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2957ms
+2025-03-01 00:38:08.917 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:38:08.918 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:38:08.918 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:38:08.919 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:38:08.919 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5522ms
+2025-03-01 00:38:08.919 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:38:08.919 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0873 ms
+2025-03-01 00:38:08.919 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.0743ms
+2025-03-01 00:39:28.900 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:39:28.901 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:39:28.901 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:39:28.901 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:39:28.902 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6005ms
+2025-03-01 00:39:28.902 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:39:28.902 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3455 ms
+2025-03-01 00:39:28.902 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.176ms
+2025-03-01 00:40:09.810 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:40:09.811 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:40:09.811 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:40:09.811 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:40:09.812 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6212ms
+2025-03-01 00:40:09.812 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:40:09.812 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2679 ms
+2025-03-01 00:40:09.812 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9213ms
+2025-03-01 00:40:10.512 +03:00 [INF] Application is shutting down...
+2025-03-01 00:40:37.726 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 00:40:37.753 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 00:40:37.754 +03:00 [INF] Hosting environment: Development
+2025-03-01 00:40:37.754 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 00:40:43.379 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:40:43.413 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 00:40:43.447 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:40:43.464 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:40:43.567 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:40:43.598 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 131.3989ms
+2025-03-01 00:40:43.599 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:40:43.601 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 153.7995 ms
+2025-03-01 00:40:43.603 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 225.3706ms
+2025-03-01 00:40:56.990 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:40:56.993 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:40:56.993 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:40:56.994 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:40:56.995 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.5518ms
+2025-03-01 00:40:56.995 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:40:56.995 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.5672 ms
+2025-03-01 00:40:56.996 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 6.3505ms
+2025-03-01 00:41:58.159 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:41:58.164 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:41:58.164 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:41:58.166 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:41:58.167 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 2.2591ms
+2025-03-01 00:41:58.168 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:41:58.168 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 4.1907 ms
+2025-03-01 00:41:58.168 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 9.4119ms
+2025-03-01 00:42:16.015 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:42:16.016 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:42:16.016 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:42:16.016 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:42:16.017 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7245ms
+2025-03-01 00:42:16.017 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:42:16.017 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4719 ms
+2025-03-01 00:42:16.017 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.3876ms
+2025-03-01 00:43:10.253 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:43:10.254 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:10.254 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:43:10.255 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:43:10.255 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9577ms
+2025-03-01 00:43:10.256 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:10.256 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.8026 ms
+2025-03-01 00:43:10.256 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.1255ms
+2025-03-01 00:43:11.604 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:43:11.604 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:11.605 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:43:11.605 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:43:11.605 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5672ms
+2025-03-01 00:43:11.606 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:11.606 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3034 ms
+2025-03-01 00:43:11.606 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.0983ms
+2025-03-01 00:43:33.298 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:43:33.298 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:33.299 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:43:33.299 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:43:33.300 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.815ms
+2025-03-01 00:43:33.300 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:33.300 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.9039 ms
+2025-03-01 00:43:33.301 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.018ms
+2025-03-01 00:43:35.726 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:43:35.727 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:35.727 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:43:35.727 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:43:35.728 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6707ms
+2025-03-01 00:43:35.728 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:43:35.728 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4348 ms
+2025-03-01 00:43:35.729 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2896ms
+2025-03-01 00:45:07.398 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:45:07.399 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:45:07.400 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:45:07.400 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:45:07.400 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5842ms
+2025-03-01 00:45:07.401 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:45:07.401 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3273 ms
+2025-03-01 00:45:07.401 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.4219ms
+2025-03-01 00:45:28.172 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:45:28.173 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:45:28.173 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:45:28.174 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:45:28.174 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4888ms
+2025-03-01 00:45:28.174 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:45:28.174 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1872 ms
+2025-03-01 00:45:28.174 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9215ms
+2025-03-01 00:46:22.744 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:46:22.744 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:22.745 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:46:22.748 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:46:22.748 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 3.435ms
+2025-03-01 00:46:22.748 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:22.749 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 4.1968 ms
+2025-03-01 00:46:22.749 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 5.098ms
+2025-03-01 00:46:24.034 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:46:24.034 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:24.034 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:46:24.035 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:46:24.035 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4128ms
+2025-03-01 00:46:24.035 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:24.035 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.9358 ms
+2025-03-01 00:46:24.035 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.6057ms
+2025-03-01 00:46:34.210 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:46:34.211 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:34.211 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:46:34.211 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:46:34.212 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4079ms
+2025-03-01 00:46:34.212 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:34.212 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.9090 ms
+2025-03-01 00:46:34.212 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.4871ms
+2025-03-01 00:46:50.497 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:46:50.497 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:50.498 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:46:50.498 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:46:50.498 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5212ms
+2025-03-01 00:46:50.499 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:46:50.499 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1561 ms
+2025-03-01 00:46:50.499 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9502ms
+2025-03-01 00:49:09.310 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:49:09.311 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:49:09.311 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:49:09.312 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:49:09.312 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7682ms
+2025-03-01 00:49:09.312 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:49:09.313 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.6605 ms
+2025-03-01 00:49:09.313 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.8805ms
+2025-03-01 00:49:39.987 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:49:39.989 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:49:39.989 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:49:39.991 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:49:39.993 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 3.5203ms
+2025-03-01 00:49:39.993 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:49:39.993 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 4.8653 ms
+2025-03-01 00:49:39.994 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 6.3815ms
+2025-03-01 00:52:04.132 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:52:04.133 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:52:04.133 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:52:04.134 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:52:04.135 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.6365ms
+2025-03-01 00:52:04.135 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:52:04.135 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.1788 ms
+2025-03-01 00:52:04.135 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.8732ms
+2025-03-01 00:52:07.498 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:52:07.498 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:52:07.498 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:52:07.499 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:52:07.499 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4022ms
+2025-03-01 00:52:07.499 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:52:07.499 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.9654 ms
+2025-03-01 00:52:07.499 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.6885ms
+2025-03-01 00:53:09.403 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:53:09.403 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:53:09.404 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:53:09.404 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:53:09.404 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5312ms
+2025-03-01 00:53:09.404 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:53:09.404 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1552 ms
+2025-03-01 00:53:09.405 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9298ms
+2025-03-01 00:53:11.954 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:53:11.955 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:53:11.955 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:53:11.955 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:53:11.956 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4248ms
+2025-03-01 00:53:11.956 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:53:11.956 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0641 ms
+2025-03-01 00:53:11.956 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.7613ms
+2025-03-01 00:53:56.605 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:53:56.605 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:53:56.605 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:53:56.606 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:53:56.606 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.48ms
+2025-03-01 00:53:56.606 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:53:56.606 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.9731 ms
+2025-03-01 00:53:56.606 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.5839ms
+2025-03-01 00:56:14.227 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:14.228 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:14.229 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:14.229 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:14.230 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.0173ms
+2025-03-01 00:56:14.230 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:14.230 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.1952 ms
+2025-03-01 00:56:14.231 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.4749ms
+2025-03-01 00:56:14.308 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:14.309 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:14.309 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:14.310 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:14.310 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6715ms
+2025-03-01 00:56:14.310 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:14.311 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.5606 ms
+2025-03-01 00:56:14.311 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.5453ms
+2025-03-01 00:56:23.352 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:23.352 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:23.353 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:23.353 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:23.353 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4962ms
+2025-03-01 00:56:23.353 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:23.353 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0443 ms
+2025-03-01 00:56:23.354 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9955ms
+2025-03-01 00:56:28.426 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:28.426 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:28.427 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:28.427 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:28.428 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9511ms
+2025-03-01 00:56:28.428 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:28.428 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.8638 ms
+2025-03-01 00:56:28.428 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.5687ms
+2025-03-01 00:56:29.664 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:29.665 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:29.665 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:29.665 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:29.666 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4638ms
+2025-03-01 00:56:29.666 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:29.666 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2466 ms
+2025-03-01 00:56:29.666 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.0468ms
+2025-03-01 00:56:31.557 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:31.558 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:31.558 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:31.559 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:31.559 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7518ms
+2025-03-01 00:56:31.559 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:31.559 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.7613 ms
+2025-03-01 00:56:31.560 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.805ms
+2025-03-01 00:56:33.808 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:33.809 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:33.809 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:33.810 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:33.810 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.475ms
+2025-03-01 00:56:33.810 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:33.810 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4213 ms
+2025-03-01 00:56:33.810 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.308ms
+2025-03-01 00:56:57.683 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:57.684 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:57.684 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:57.685 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:57.685 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5006ms
+2025-03-01 00:56:57.685 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:57.685 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4022 ms
+2025-03-01 00:56:57.685 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.1512ms
+2025-03-01 00:56:59.018 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:56:59.018 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:59.018 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:56:59.019 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:56:59.020 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7335ms
+2025-03-01 00:56:59.020 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:56:59.020 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.8910 ms
+2025-03-01 00:56:59.020 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.7642ms
+2025-03-01 00:57:01.291 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:57:01.292 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:57:01.293 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:57:01.294 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:57:01.294 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.8687ms
+2025-03-01 00:57:01.294 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:57:01.294 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.7531 ms
+2025-03-01 00:57:01.294 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.3793ms
+2025-03-01 00:59:26.967 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 00:59:26.968 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:59:26.969 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 00:59:26.971 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 00:59:26.971 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 2.221ms
+2025-03-01 00:59:26.971 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 00:59:26.972 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 3.0402 ms
+2025-03-01 00:59:26.972 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 5.1001ms
+2025-03-01 01:00:25.729 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 01:00:25.730 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 01:00:25.730 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 01:00:25.730 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 01:00:25.731 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.3893ms
+2025-03-01 01:00:25.731 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 01:00:25.731 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0113 ms
+2025-03-01 01:00:25.731 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2905ms
+2025-03-01 01:17:33.225 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 01:17:33.254 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 01:17:33.254 +03:00 [INF] Hosting environment: Development
+2025-03-01 01:17:33.254 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 01:18:19.031 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 01:18:19.059 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 01:18:19.060 +03:00 [INF] Hosting environment: Development
+2025-03-01 01:18:19.060 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 01:19:17.126 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 01:19:17.156 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 01:19:17.157 +03:00 [INF] Hosting environment: Development
+2025-03-01 01:19:17.157 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 01:20:55.329 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 01:20:55.357 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 01:20:55.358 +03:00 [INF] Hosting environment: Development
+2025-03-01 01:20:55.358 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 01:23:02.117 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 01:23:02.143 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 01:23:02.143 +03:00 [INF] Hosting environment: Development
+2025-03-01 01:23:02.143 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 02:01:03.872 +03:00 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:01:03.909 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 02:01:03.948 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:01:03.969 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:01:04.098 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:01:04.128 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 155.9809ms
+2025-03-01 02:01:04.129 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:01:04.131 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 183.4773 ms
+2025-03-01 02:01:04.135 +03:00 [INF] Request finished HTTP/1.1 GET http://127.0.0.1:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 264.0086ms
+2025-03-01 02:02:55.341 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:02:55.350 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:02:55.351 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:02:55.352 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:02:55.354 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 3.2454ms
+2025-03-01 02:02:55.355 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:02:55.355 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 4.3339 ms
+2025-03-01 02:02:55.355 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 14.4426ms
+2025-03-01 02:02:56.113 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/favicon.ico - null null
+2025-03-01 02:02:56.116 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 0.1334 ms
+2025-03-01 02:02:56.117 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/favicon.ico - 404 0 null 3.3475ms
+2025-03-01 02:02:56.118 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8081/favicon.ico, Response status code: 404
+2025-03-01 02:08:19.743 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:08:19.745 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:19.746 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:08:19.751 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:08:19.753 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 6.508ms
+2025-03-01 02:08:19.753 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:19.753 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 7.7579 ms
+2025-03-01 02:08:19.753 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 10.768ms
+2025-03-01 02:08:21.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:08:21.740 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:21.740 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:08:21.740 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:08:21.741 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5962ms
+2025-03-01 02:08:21.741 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:21.741 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2046 ms
+2025-03-01 02:08:21.741 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.0885ms
+2025-03-01 02:08:22.803 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:08:22.804 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:22.804 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:08:22.804 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:08:22.805 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9038ms
+2025-03-01 02:08:22.805 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:22.805 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.7623 ms
+2025-03-01 02:08:22.806 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.6954ms
+2025-03-01 02:08:31.589 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:08:31.590 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:31.590 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:08:31.591 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:08:31.592 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9224ms
+2025-03-01 02:08:31.592 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:08:31.592 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.0118 ms
+2025-03-01 02:08:31.592 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.8941ms
+2025-03-01 02:12:30.641 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 02:12:30.668 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 02:12:30.669 +03:00 [INF] Hosting environment: Development
+2025-03-01 02:12:30.669 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 02:15:02.006 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:15:02.035 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 02:15:02.067 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:15:02.082 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:15:02.190 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:15:02.225 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 140.0549ms
+2025-03-01 02:15:02.227 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:15:02.228 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 162.0974 ms
+2025-03-01 02:15:02.231 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 226.2686ms
+2025-03-01 02:15:02.869 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/favicon.ico - null null
+2025-03-01 02:15:02.872 +03:00 [INF] HTTP GET /favicon.ico responded 404 in 0.1301 ms
+2025-03-01 02:15:02.873 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/favicon.ico - 404 0 null 4.5749ms
+2025-03-01 02:15:02.874 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8081/favicon.ico, Response status code: 404
+2025-03-01 02:16:03.155 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:16:03.157 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:16:03.158 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:16:03.158 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:16:03.159 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.4746ms
+2025-03-01 02:16:03.159 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:16:03.160 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.2431 ms
+2025-03-01 02:16:03.160 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 4.3929ms
+2025-03-01 02:16:09.720 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:16:09.720 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:16:09.721 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:16:09.721 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:16:09.722 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.8366ms
+2025-03-01 02:16:09.722 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:16:09.722 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4408 ms
+2025-03-01 02:16:09.722 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.3231ms
+2025-03-01 02:21:18.386 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:21:18.387 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:18.387 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:21:18.390 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:21:18.390 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 2.6894ms
+2025-03-01 02:21:18.390 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:18.390 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 3.5904 ms
+2025-03-01 02:21:18.391 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 4.9343ms
+2025-03-01 02:21:20.021 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/sample-data/weather.json - null null
+2025-03-01 02:21:20.022 +03:00 [INF] HTTP GET /sample-data/weather.json responded 404 in 0.0982 ms
+2025-03-01 02:21:20.023 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/sample-data/weather.json - 404 0 null 2.1035ms
+2025-03-01 02:21:20.023 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8081/sample-data/weather.json, Response status code: 404
+2025-03-01 02:21:20.296 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:21:20.296 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:20.297 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:21:20.297 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:21:20.297 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6907ms
+2025-03-01 02:21:20.298 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:20.298 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3431 ms
+2025-03-01 02:21:20.298 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2018ms
+2025-03-01 02:21:24.711 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:21:24.711 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:24.712 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:21:24.712 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:21:24.712 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6414ms
+2025-03-01 02:21:24.713 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:24.713 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4367 ms
+2025-03-01 02:21:24.713 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2023ms
+2025-03-01 02:21:37.695 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:21:37.695 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:37.695 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:21:37.696 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:21:37.696 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7685ms
+2025-03-01 02:21:37.696 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:21:37.697 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3852 ms
+2025-03-01 02:21:37.697 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.0623ms
+2025-03-01 02:22:04.072 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:22:04.073 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:04.073 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:22:04.073 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:22:04.073 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4575ms
+2025-03-01 02:22:04.074 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:04.074 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.0355 ms
+2025-03-01 02:22:04.074 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.6746ms
+2025-03-01 02:22:07.158 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:22:07.158 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:07.158 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:22:07.159 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:22:07.159 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5165ms
+2025-03-01 02:22:07.159 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:07.159 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2368 ms
+2025-03-01 02:22:07.160 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.8597ms
+2025-03-01 02:22:09.096 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:22:09.097 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:09.097 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:22:09.098 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:22:09.098 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5416ms
+2025-03-01 02:22:09.098 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:09.098 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1759 ms
+2025-03-01 02:22:09.098 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9935ms
+2025-03-01 02:22:15.619 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:22:15.620 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:15.620 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:22:15.621 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:22:15.621 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5689ms
+2025-03-01 02:22:15.621 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:15.621 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2333 ms
+2025-03-01 02:22:15.621 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.8296ms
+2025-03-01 02:22:36.878 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:22:36.879 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:36.879 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:22:36.879 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:22:36.880 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4107ms
+2025-03-01 02:22:36.880 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:36.880 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.8982 ms
+2025-03-01 02:22:36.880 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.6465ms
+2025-03-01 02:22:39.493 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:22:39.494 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:39.494 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:22:39.494 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:22:39.495 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6259ms
+2025-03-01 02:22:39.495 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:22:39.495 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1007 ms
+2025-03-01 02:22:39.495 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9587ms
+2025-03-01 02:23:09.869 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:23:09.870 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:23:09.870 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:23:09.870 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:23:09.871 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7758ms
+2025-03-01 02:23:09.871 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:23:09.871 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2786 ms
+2025-03-01 02:23:09.871 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.118ms
+2025-03-01 02:29:56.007 +03:00 [INF] Application is shutting down...
+2025-03-01 02:30:32.957 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 02:30:32.990 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 02:30:32.991 +03:00 [INF] Hosting environment: Development
+2025-03-01 02:30:32.992 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 02:30:36.103 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:30:36.135 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 02:30:36.170 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:30:36.185 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:30:36.284 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:30:36.314 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 126.2527ms
+2025-03-01 02:30:36.315 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:30:36.317 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 147.7591 ms
+2025-03-01 02:30:36.321 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 218.7206ms
+2025-03-01 02:30:49.178 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:30:49.180 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:30:49.181 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:30:49.182 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:30:49.183 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.4743ms
+2025-03-01 02:30:49.183 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:30:49.183 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.4257 ms
+2025-03-01 02:30:49.183 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 5.7936ms
+2025-03-01 02:30:49.917 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:30:49.919 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:30:49.919 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:30:49.920 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:30:49.920 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.755ms
+2025-03-01 02:30:49.920 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:30:49.920 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3423 ms
+2025-03-01 02:30:49.921 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.1189ms
+2025-03-01 02:30:58.220 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8081/api/configurations/SiteName - null null
+2025-03-01 02:30:58.220 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-03-01 02:30:58.221 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-03-01 02:30:58.221 +03:00 [INF] HTTP OPTIONS /api/configurations/SiteName responded 405 in 0.3550 ms
+2025-03-01 02:30:58.221 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8081/api/configurations/SiteName - 405 0 null 1.1482ms
+2025-03-01 02:31:02.118 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:31:02.118 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:31:02.118 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:31:02.119 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:31:02.119 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.5508ms
+2025-03-01 02:31:02.119 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:31:02.119 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1626 ms
+2025-03-01 02:31:02.119 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.8801ms
+2025-03-01 02:32:38.381 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:32:38.382 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:32:38.382 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:32:38.383 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:32:38.383 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6277ms
+2025-03-01 02:32:38.383 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:32:38.383 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.3197 ms
+2025-03-01 02:32:38.384 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 3.1206ms
+2025-03-01 02:32:48.348 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:32:48.348 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:32:48.349 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:32:48.349 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:32:48.350 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.8617ms
+2025-03-01 02:32:48.350 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:32:48.350 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4556 ms
+2025-03-01 02:32:48.350 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2092ms
+2025-03-01 02:32:56.711 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:32:56.712 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:32:56.712 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:32:56.713 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:32:56.713 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6779ms
+2025-03-01 02:32:56.713 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:32:56.714 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.5731 ms
+2025-03-01 02:32:56.714 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.4456ms
+2025-03-01 02:33:13.078 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:33:13.079 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:33:13.079 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:33:13.079 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:33:13.079 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.3972ms
+2025-03-01 02:33:13.079 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:33:13.079 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.8926 ms
+2025-03-01 02:33:13.080 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.6415ms
+2025-03-01 02:34:52.532 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:34:52.533 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:34:52.533 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:34:52.533 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:34:52.534 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4968ms
+2025-03-01 02:34:52.534 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:34:52.534 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1280 ms
+2025-03-01 02:34:52.534 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.1051ms
+2025-03-01 02:34:59.597 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:34:59.597 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:34:59.598 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:34:59.598 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:34:59.598 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4967ms
+2025-03-01 02:34:59.598 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:34:59.598 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.1112 ms
+2025-03-01 02:34:59.599 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 1.9846ms
+2025-03-01 02:35:56.238 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:35:56.239 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:35:56.243 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:35:56.246 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:35:56.248 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 5.2298ms
+2025-03-01 02:35:56.248 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:35:56.248 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 9.7285 ms
+2025-03-01 02:35:56.249 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 10.7769ms
+2025-03-01 02:36:03.101 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:36:03.102 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:36:03.102 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:36:03.103 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:36:03.103 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.4269ms
+2025-03-01 02:36:03.103 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:36:03.103 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 0.9407 ms
+2025-03-01 02:36:03.103 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.2491ms
+2025-03-01 02:36:07.240 +03:00 [INF] Application is shutting down...
+2025-03-01 02:36:14.593 +03:00 [INF] Now listening on: http://localhost:8081
+2025-03-01 02:36:14.627 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-01 02:36:14.627 +03:00 [INF] Hosting environment: Development
+2025-03-01 02:36:14.628 +03:00 [INF] Content root path: /home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.API
+2025-03-01 02:36:18.100 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:36:18.129 +03:00 [INF] CORS policy execution successful.
+2025-03-01 02:36:18.146 +03:00 [WRN] Failed to determine the https port for redirect.
+2025-03-01 02:36:18.197 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:36:18.217 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:36:18.355 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:36:18.400 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 179.3083ms
+2025-03-01 02:36:18.403 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:36:18.405 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 209.1027 ms
+2025-03-01 02:36:18.409 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 310.4847ms
+2025-03-01 02:36:24.690 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:36:24.691 +03:00 [INF] CORS policy execution successful.
+2025-03-01 02:36:24.693 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:36:24.694 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:36:24.694 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:36:24.695 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 1.5496ms
+2025-03-01 02:36:24.695 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:36:24.696 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 2.3999 ms
+2025-03-01 02:36:24.696 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 6.6189ms
+2025-03-01 02:38:15.883 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:38:15.885 +03:00 [INF] CORS policy execution successful.
+2025-03-01 02:38:15.886 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:38:15.886 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:38:15.887 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:38:15.887 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.9374ms
+2025-03-01 02:38:15.887 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:38:15.888 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.7067 ms
+2025-03-01 02:38:15.888 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 4.4726ms
+2025-03-01 02:39:35.373 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:39:35.373 +03:00 [INF] CORS policy execution successful.
+2025-03-01 02:39:35.374 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:39:35.374 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:39:35.374 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:39:35.375 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.6107ms
+2025-03-01 02:39:35.375 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:39:35.375 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.2305 ms
+2025-03-01 02:39:35.375 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.5373ms
+2025-03-01 02:39:50.599 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - null null
+2025-03-01 02:39:50.599 +03:00 [INF] CORS policy execution successful.
+2025-03-01 02:39:50.600 +03:00 [INF] Executing endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:39:50.600 +03:00 [INF] Route matched with {action = "GetAll", controller = "Configuration"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ConfigManager.Domain.Entities.ConfigurationSetting]]] GetAll(System.String) on controller ConfigManager.API.Controllers.ConfigurationController (ConfigManager.API).
+2025-03-01 02:39:50.600 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+WhereSelectArrayIterator`2[[StackExchange.Redis.RedisValue, StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46],[ConfigManager.Domain.Entities.ConfigurationSetting, ConfigManager.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-01 02:39:50.601 +03:00 [INF] Executed action ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API) in 0.7369ms
+2025-03-01 02:39:50.601 +03:00 [INF] Executed endpoint 'ConfigManager.API.Controllers.ConfigurationController.GetAll (ConfigManager.API)'
+2025-03-01 02:39:50.601 +03:00 [INF] HTTP GET /api/configurations/SERVICE-A responded 200 in 1.4056 ms
+2025-03-01 02:39:50.601 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:8081/api/configurations/SERVICE-A - 200 null application/json; charset=utf-8 2.3966ms

@@ -1,0 +1,202 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/ConfigManager.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/ConfigManager.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/ConfigManager.Application.csproj",
+        "projectName": "ConfigManager.Application",
+        "projectPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/ConfigManager.Application.csproj",
+        "packagesPath": "/home/omara/.nuget/packages/",
+        "outputPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/omara/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj": {
+                "projectPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj",
+        "projectName": "ConfigManager.Domain",
+        "projectPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj",
+        "packagesPath": "/home/omara/.nuget/packages/",
+        "outputPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/omara/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/ConfigManager.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/ConfigManager.Infrastructure.csproj",
+        "projectName": "ConfigManager.Infrastructure",
+        "projectPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/ConfigManager.Infrastructure.csproj",
+        "packagesPath": "/home/omara/.nuget/packages/",
+        "outputPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/omara/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/ConfigManager.Application.csproj": {
+                "projectPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Application/ConfigManager.Application.csproj"
+              },
+              "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj": {
+                "projectPath": "/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Domain/ConfigManager.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.24, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.112/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
