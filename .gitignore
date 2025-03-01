@@ -1,0 +1,61 @@
+# Dotnet-specific ignores
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.log
+*.user
+*.lock.json
+project.lock.json
+*.pid
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# Build directories
+artifacts/
+BundleArtifacts/
+
+# VS Code settings
+.vscode/
+
+# User-specific files
+*.swp
+*.swo
+*.sln.iml
+*.userprefs
+*.bak
+
+# Logs and temp files
+logs/
+*.log
+*.tmp
+
+# NuGet
+*.nupkg
+packages/
+
+# ASP.NET / Blazor artifacts
+wwwroot/css/
+wwwroot/js/
+wwwroot/lib/
+
+# Entity Framework Migrations
+Migrations/
+
+# Rider / JetBrains
+.idea/
+*.sln.DotSettings.user
+
+# Docker
+.dockerignore
+**/[Dd]ockerfile
+**/[Dd]ocker*
+
+# Secrets and configuration
+secrets.json
+appsettings*.json
+!appsettings.Development.json
