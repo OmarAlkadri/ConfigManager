@@ -59,3 +59,7 @@ Migrations/
 secrets.json
 appsettings*.json
 !appsettings.Development.json
+
+# Ignore bin/ and obj/ directories for all projects (including sub-projects)
+**/bin/
+**/obj/
