@@ -129,11 +129,11 @@ namespace ConfigManager.API.Controllers
         }
 
         [HttpPost("seed")]
-        public async Task<IActionResult> SeedData(string? applicationName)
+        public async Task<IActionResult> SeedData()
         {
             try
             {
-                await _configurationService.SeedDataAsync(applicationName);
+                await _configurationService.SeedDataAsync();
                 return Ok(new { Message = "Seed data has been successfully added." });
             }
             catch (Exception ex)

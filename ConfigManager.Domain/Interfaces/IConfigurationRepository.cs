@@ -14,7 +14,7 @@ namespace ConfigManager.Domain.Interfaces
         Task Add(ConfigurationSetting setting);
         Task UpdateAsync(string id, ConfigurationUpdateDto setting);
         Task DeleteAsync(string id);
-        Task SeedDataAsync(string? applicationName);
+        Task SeedDataAsync();
         Task<IEnumerable<string>> GetAllApplicationNamesAsync();
         Task<PagedResult<ConfigurationSetting>> GetAllByApplicationNamePage(string applicationName, int page = 1, int size = 10, string? search = null);
 

@@ -118,9 +118,9 @@ namespace ConfigManager.Infrastructure.Persistence
         }
 
 
-        public async Task SeedDataAsync(string? applicationName)
+        public async Task SeedDataAsync()
         {
-            applicationName ??= $"App-{Guid.NewGuid()}";
+            var applicationName = $"App-{Guid.NewGuid()}";
 
             var faker = new Faker<ConfigurationSetting>()
                 .CustomInstantiator(f => new ConfigurationSetting(

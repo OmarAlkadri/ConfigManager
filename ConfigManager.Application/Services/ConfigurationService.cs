@@ -30,9 +30,9 @@ namespace ConfigManager.Application.Services
             _logger = logger;
         }
 
-        public async Task SeedDataAsync(string? applicationName)
+        public async Task SeedDataAsync()
         {
-            await _configRepository.SeedDataAsync(applicationName);
+            await _configRepository.SeedDataAsync();
         }
 
         public async Task<ConfigurationSetting?> GetConfigurationByIdAsync(string id)

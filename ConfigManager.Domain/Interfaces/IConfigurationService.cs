@@ -8,7 +8,7 @@ namespace ConfigManager.Domain.Interfaces
 {
     public interface IConfigurationService
     {
-        Task SeedDataAsync(string? applicationName);
+        Task SeedDataAsync();
         Task<ConfigurationSetting?> GetConfigurationByIdAsync(string id);
         Task<IEnumerable<ConfigurationSetting>> GetAll();
         Task<IEnumerable<ConfigurationSetting>> GetAllConfigurationsAsync(string applicationName, string? search = null);
