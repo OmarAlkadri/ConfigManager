@@ -123,14 +123,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // CORS
-var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>() ?? 
+    new string[] { "http://localhost:5000", "http://localhost:5001", "https://configmanager.onrender.com" };
 var corsPolicy = "AllowAllOrigins";
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(corsPolicy, policy =>
     {
-        policy.WithOrigins(allowedOrigins ?? new string[] { "http://localhost:5000", "http://localhost:5001" })
+        policy.AllowAnyOrigin()
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -139,18 +140,35 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 
+
+
+
+app.MapHealthChecks("/health", new HealthCheckOptions
+{
+    ResponseWriter = async (context, report) =>
+    {
+        var result = JsonConvert.SerializeObject(new
+        {
+            status = report.Status.ToString(),
+            checks = report.Entries.Select(e => new { name = e.Key, status = e.Value.Status.ToString() })
+        }, Formatting.Indented);
+
+        context.Response.ContentType = "application/json";
+        await context.Response.WriteAsync(result);
+    }
+});
+
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConfigManager API v1"));
+https://configmanager.onrender.com/
+
+app.UseHttpsRedirection();
+app.UseCors(corsPolicy);
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
-
-app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConfigManager API v1"));
-
-
-app.UseHttpsRedirection();
-app.UseCors(corsPolicy);
 app.UseAuthorization();
 app.UseIpRateLimiting();
 app.MapControllers();
