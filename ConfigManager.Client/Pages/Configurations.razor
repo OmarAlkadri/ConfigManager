@@ -38,7 +38,6 @@
     private CancellationTokenSource? _cts;
     private string errorMessage;
     private int totalItems = 0;
-
     private int currentPage = 1;
     private int pageSize = 10;
     private int totalPages = 1;
@@ -97,7 +96,6 @@
         }
     }
 
-
     private async Task LoadConfigurations()
     {
         if (string.IsNullOrWhiteSpace(selectedAppName))
@@ -108,7 +106,8 @@
 
         try
         {
-            var response = await Http.GetAsync($"api/configurations/app/page/{selectedAppName}?page={currentPage}&size={pageSize}");
+            var response = await
+            Http.GetAsync($"api/configurations/app/page/{selectedAppName}?page={currentPage}&size={pageSize}&search={searchQuery}");
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
@@ -130,9 +129,9 @@
         StateHasChanged();
     }
 
-    private async Task OnSearchQueryChanged(ChangeEventArgs e)
+    private async Task OnSearchQueryChanged(string query)
     {
-        searchQuery = e.Value?.ToString() ?? string.Empty;
+        searchQuery = query;
         _cts?.Cancel();
         _cts = new CancellationTokenSource();
         var token = _cts.Token;

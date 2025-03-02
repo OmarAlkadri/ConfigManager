@@ -1,9 +1,9 @@
 @code {
     [Parameter] public string SearchQuery { get; set; } = string.Empty;
-    [Parameter] public EventCallback<ChangeEventArgs> OnSearchChanged { get; set; }
+    [Parameter] public EventCallback<string> OnSearchChanged { get; set; }
 }
 
 <div class="mb-3 d-flex">
     <input type="text" class="form-control me-2" placeholder="Search by name..." @bind="SearchQuery"
-        @oninput="OnSearchChanged" />
+        @oninput="@(e => OnSearchChanged.InvokeAsync(e.Value?.ToString() ?? string.Empty))" />
 </div>
