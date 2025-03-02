@@ -1,9 +1,0 @@
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Client
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/appsettings.Development.json
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/appsettings.json
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Client.dll
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Client.deps.json
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Client.runtimeconfig.json
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Client.pdb
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Domain.dll
-/home/omara/ahmet/ConfigManager/ConfigManager/ConfigManager.Client/publish/ConfigManager.Domain.pdb
