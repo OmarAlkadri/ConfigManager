@@ -9,11 +9,15 @@ using System.Linq;
 using System.Collections.Generic;
 using ConfigManager.API.DependencyInjection;
 using ConfigManager.Application.DependencyInjection;
-using ConfigManager.Infrastructure.DependencyInjection;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using AspNetCoreRateLimit;
 using Serilog;
 using RabbitMQ.Client;
+using MongoDB.Driver;
+using HealthChecks.MongoDb;
+using ConfigManager.Infrastructure.DependencyInjection;
+using ConfigManager.Infrastructure.Persistence;
+using Newtonsoft.Json;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -39,9 +43,23 @@ builder.Services.Configure<IpRateLimitOptions>(options =>
 builder.Services.AddInMemoryRateLimiting();
 builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
 
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var mongoConnectionString = builder.Configuration["MongoDB:ConnectionString"];
+    return new MongoClient(mongoConnectionString);
+});
+
+builder.Services.AddScoped<IMongoDatabase>(sp =>
+{
+    var client = sp.GetRequiredService<IMongoClient>();
+    var databaseName = builder.Configuration["MongoDB:DatabaseName"];
+    return client.GetDatabase(databaseName);
+});
+
 builder.Services.AddHealthChecks()
-    .AddRedis(builder.Configuration["Redis:ConnectionString"]!, name: "Redis")
-    .AddRabbitMQ(sp => {
+    .AddMongoDb(sp => new MongoClient(builder.Configuration["MongoDB:ConnectionString"]!), name: "MongoDB")
+    .AddRabbitMQ(sp =>
+    {
         var factory = new ConnectionFactory()
         {
             Uri = new Uri(sp.GetRequiredService<IConfiguration>()?["RabbitMQ:ConnectionString"]!)
@@ -49,27 +67,38 @@ builder.Services.AddHealthChecks()
         return factory.CreateConnectionAsync();
     }, name: "RabbitMQ");
 
-string? redisConnection = builder.Configuration["Redis:ConnectionString"];
+string? mongoConnection = builder.Configuration["MongoDB:ConnectionString"];
+string? databaseName = builder.Configuration["MongoDB:DatabaseName"];
+string? collectionName = builder.Configuration["MongoDB:CollectionName"];
 string? rabbitMqConnection = builder.Configuration["RabbitMQ:ConnectionString"];
 string? applicationName = builder.Configuration["Application:Name"];
 
-if (string.IsNullOrEmpty(redisConnection) || string.IsNullOrEmpty(rabbitMqConnection) || string.IsNullOrEmpty(applicationName))
+if (string.IsNullOrEmpty(mongoConnection) || string.IsNullOrEmpty(rabbitMqConnection) || string.IsNullOrEmpty(applicationName))
 {
     throw new InvalidOperationException("Missing required configuration values.");
 }
 
-builder.Services.AddInfrastructureServices(applicationName);
-builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructureServices(collectionName);
+builder.Services.AddApplicationServices(collectionName);
 builder.Services.AddApiServices();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
+var corsPolicy = "AllowAllOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(corsPolicy, policy =>
+    {
+        policy.WithOrigins(allowedOrigins)
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
-app.UseCors(policy =>
-    policy.WithOrigins("http://localhost:5000")
-          .AllowAnyMethod()
-          .AllowAnyHeader());
 
 if (app.Environment.IsDevelopment())
 {
@@ -78,6 +107,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(corsPolicy);
+
 app.UseAuthorization();
 app.UseIpRateLimiting();
 app.MapControllers();
@@ -87,21 +118,18 @@ app.MapHealthChecks("/health", new HealthCheckOptions
 {
     ResponseWriter = async (context, report) =>
     {
-        var result = System.Text.Json.JsonSerializer.Serialize(
-            new
-            {
-                status = report.Status.ToString(),
-                checks = report.Entries.Select(e => new { name = e.Key, status = e.Value.Status.ToString() })
-            });
+        var result = JsonConvert.SerializeObject(new
+        {
+            status = report.Status.ToString(),
+            checks = report.Entries.Select(e => new { name = e.Key, status = e.Value.Status.ToString() })
+        }, Formatting.Indented);
+
         context.Response.ContentType = "application/json";
         await context.Response.WriteAsync(result);
     }
 });
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
 
 app.MapGet("/weatherforecast", () =>
 {
