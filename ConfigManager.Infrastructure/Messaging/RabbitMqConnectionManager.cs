@@ -6,16 +6,25 @@ namespace ConfigManager.Infrastructure.Messaging
 {
     public static class RabbitMqConnectionManager
     {
-        private static readonly ConnectionFactory _factory = new ConnectionFactory
-        {
-            Uri = new Uri("amqp://guest:guest@localhost:5672/"),
-        };
-
         private static IConnection? _connection;
 
-        public static async Task<IConnection> GetConnectionAsync()
+        public static async Task<IConnection> GetConnectionAsync(string rabbitMqUrl)
         {
-            return _connection ??= await _factory.CreateConnectionAsync();
+            Console.WriteLine($"rabbitMqUrl: {rabbitMqUrl}");
+
+            if (string.IsNullOrEmpty(rabbitMqUrl))
+            {
+                throw new ArgumentNullException(nameof(rabbitMqUrl), "RabbitMQ URL cannot be null or empty.");
+            }
+
+            Console.WriteLine($"[RabbitMqConnectionManager] Trying to connect to: {rabbitMqUrl}");
+
+            var factory = new ConnectionFactory
+            {
+                Uri = new Uri(rabbitMqUrl)
+            };
+
+            return _connection ??= await factory.CreateConnectionAsync();
         }
     }
 }

@@ -5,6 +5,7 @@
 @inject IJSRuntime JS
 @using System.Net
 @using ConfigManager.Domain.DTOs
+@using Newtonsoft.Json
 
 <PageTitle>Configurations</PageTitle>
 
@@ -110,7 +111,8 @@
             var response = await Http.GetAsync($"api/configurations/app/page/{selectedAppName}?page={currentPage}&size={pageSize}");
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadFromJsonAsync<PagedResult<ConfigurationSetting>>();
+                var json = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<PagedResult<ConfigurationSetting>>(json);
                 configurations = result?.Items?.ToList() ?? new List<ConfigurationSetting>();
                 totalPages = result?.TotalPages ?? 1;
                 totalItems = result?.TotalItems ?? 0;

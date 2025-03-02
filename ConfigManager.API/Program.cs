@@ -16,15 +16,19 @@ using RabbitMQ.Client;
 using MongoDB.Driver;
 using HealthChecks.MongoDb;
 using ConfigManager.Infrastructure.DependencyInjection;
-using ConfigManager.Infrastructure.Persistence;
 using Newtonsoft.Json;
 
 Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
     .WriteTo.Console()
-    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 10)
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+
+var port = Environment.GetEnvironmentVariable("CONFIG_MANAGER_PORT") ?? "8081";
+builder.WebHost.UseUrls($"http://*:{port}");
+
 builder.Host.UseSerilog();
 
 builder.Services.AddMemoryCache();
@@ -46,40 +50,46 @@ builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>()
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
     var mongoConnectionString = builder.Configuration["MongoDB:ConnectionString"];
-    return new MongoClient(mongoConnectionString);
+    return new MongoClient(mongoConnectionString ?? throw new ArgumentNullException("MongoDB ConnectionString is missing."));
 });
 
 builder.Services.AddScoped<IMongoDatabase>(sp =>
 {
     var client = sp.GetRequiredService<IMongoClient>();
-    var databaseName = builder.Configuration["MongoDB:DatabaseName"];
-    return client.GetDatabase(databaseName);
+    var databaseName = builder.Configuration["MongoDB:DatabaseName"] ?? throw new ArgumentNullException("MongoDB DatabaseName is missing.");
+    return client.GetDatabase(databaseName ?? throw new ArgumentNullException("MongoDB DatabaseName is missing."));
+});
+
+builder.Services.AddSingleton<IConnection>(sp =>
+{
+    var rabbitMqConfig = sp.GetRequiredService<IConfiguration>().GetSection("RabbitMQ");
+    var factory = new ConnectionFactory()
+    {
+        HostName = rabbitMqConfig["Host"],
+        Port = int.Parse(rabbitMqConfig["Port"] ?? "5672"),
+        UserName = rabbitMqConfig["Username"],
+        Password = rabbitMqConfig["Password"]
+    };
+    
+    return Task.Run(async () => await factory.CreateConnectionAsync()).GetAwaiter().GetResult();
 });
 
 builder.Services.AddHealthChecks()
     .AddMongoDb(sp => new MongoClient(builder.Configuration["MongoDB:ConnectionString"]!), name: "MongoDB")
-    .AddRabbitMQ(sp =>
-    {
-        var factory = new ConnectionFactory()
-        {
-            Uri = new Uri(sp.GetRequiredService<IConfiguration>()?["RabbitMQ:ConnectionString"]!)
-        };
-        return factory.CreateConnectionAsync();
-    }, name: "RabbitMQ");
+    .AddRabbitMQ(sp => sp.GetRequiredService<IConnection>(), name: "RabbitMQ");
+    
+var mongoConnection = builder.Configuration["MongoDB:ConnectionString"] ?? throw new ArgumentNullException("MongoDB ConnectionString is missing.");
+var databaseName = builder.Configuration["MongoDB:DatabaseName"];
+var collectionName = builder.Configuration["MongoDB:CollectionName"] ?? "ConfigurationSettings";
+var applicationName = builder.Configuration["Application:Name"];
 
-string? mongoConnection = builder.Configuration["MongoDB:ConnectionString"];
-string? databaseName = builder.Configuration["MongoDB:DatabaseName"];
-string? collectionName = builder.Configuration["MongoDB:CollectionName"];
-string? rabbitMqConnection = builder.Configuration["RabbitMQ:ConnectionString"];
-string? applicationName = builder.Configuration["Application:Name"];
-
-if (string.IsNullOrEmpty(mongoConnection) || string.IsNullOrEmpty(rabbitMqConnection) || string.IsNullOrEmpty(applicationName))
+if (string.IsNullOrEmpty(mongoConnection) || string.IsNullOrEmpty(applicationName))
 {
     throw new InvalidOperationException("Missing required configuration values.");
 }
 
-builder.Services.AddInfrastructureServices(collectionName ?? "ConfigurationSettings");
-builder.Services.AddApplicationServices(collectionName ?? "ConfigurationSettings");
+builder.Services.AddInfrastructureServices(builder.Configuration, collectionName);
+builder.Services.AddApplicationServices(builder.Configuration, collectionName);
 builder.Services.AddApiServices();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -92,7 +102,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(corsPolicy, policy =>
     {
-        policy.WithOrigins(allowedOrigins?? new string[] { "http://localhost:5000" ,"http://localhost:5001"})
+        policy.WithOrigins(allowedOrigins ?? new string[] { "http://localhost:5000", "http://localhost:5001" })
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -129,25 +139,15 @@ app.MapHealthChecks("/health", new HealthCheckOptions
     }
 });
 
-var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
-
-app.MapGet("/weatherforecast", () =>
+try
 {
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast(
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
-
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+    app.Run();
+}
+catch (Exception ex)
 {
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    Log.Fatal(ex, "Application failed to start.");
+}
+finally
+{
+    Log.CloseAndFlush();
 }

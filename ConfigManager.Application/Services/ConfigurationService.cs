@@ -6,6 +6,7 @@ using ConfigManager.Domain.Entities;
 using ConfigManager.Domain.Interfaces;
 using ConfigManager.Domain.DTOs;
 using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Logging;
 
 namespace ConfigManager.Application.Services
 {
@@ -14,13 +15,19 @@ namespace ConfigManager.Application.Services
         private readonly IConfigurationRepository _configRepository;
         private readonly IMessageBroker _messageBroker;
         private readonly IMemoryCache _cache;
+        private readonly ILogger<ConfigurationService> _logger;
         private readonly TimeSpan _cacheDuration = TimeSpan.FromMinutes(5);
 
-        public ConfigurationService(IConfigurationRepository configRepository, IMessageBroker messageBroker, IMemoryCache cache)
+        public ConfigurationService(
+            IConfigurationRepository configRepository,
+            IMessageBroker messageBroker,
+            IMemoryCache cache,
+            ILogger<ConfigurationService> logger)
         {
             _configRepository = configRepository;
             _messageBroker = messageBroker;
             _cache = cache;
+            _logger = logger;
         }
 
         public async Task SeedDataAsync(string? applicationName)
@@ -36,7 +43,7 @@ namespace ConfigManager.Application.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error fetching configuration by ID: {ex.Message}");
+                _logger.LogError(ex, "Error fetching configuration by ID: {Id}", id);
                 throw;
             }
         }
@@ -80,7 +87,7 @@ namespace ConfigManager.Application.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error adding configuration: {ex.Message}");
+                _logger.LogError(ex, "Error adding configuration: {SettingName}", setting.Name);
             }
         }
 
@@ -97,7 +104,7 @@ namespace ConfigManager.Application.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting configuration: {ex.Message}");
+                _logger.LogError(ex, "Error deleting configuration: {Id}", id);
             }
         }
 
@@ -111,7 +118,7 @@ namespace ConfigManager.Application.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating configuration: {ex.Message}");
+                _logger.LogError(ex, "Error updating configuration: {Id}", id);
             }
         }
 

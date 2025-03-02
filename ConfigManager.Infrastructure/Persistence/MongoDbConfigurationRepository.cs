@@ -33,8 +33,12 @@ namespace ConfigManager.Infrastructure.Persistence
             return await _configCollection.Find(filter).FirstOrDefaultAsync();
         }
 
-        public async Task<PagedResult<ConfigurationSetting>> GetAllByApplicationNamePage(string applicationName, int page = 1, int size = 10, string? search = null)
+        public async Task<PagedResult<ConfigurationSetting>> GetAllByApplicationNamePage(
+            string applicationName, int page = 1, int size = 10, string? search = null)
         {
+            if (page < 1) page = 1;
+            if (size < 1) size = 10;
+        
             var filter = Builders<ConfigurationSetting>.Filter.And(
                 Builders<ConfigurationSetting>.Filter.Eq(c => c.ApplicationName, applicationName),
                 Builders<ConfigurationSetting>.Filter.Eq(c => c.IsActive, true)
@@ -42,23 +46,22 @@ namespace ConfigManager.Infrastructure.Persistence
         
             if (!string.IsNullOrEmpty(search))
             {
-                var searchFilter = Builders<ConfigurationSetting>.Filter.Regex(c => c.Name, new BsonRegularExpression(search, "i"));
+                var searchFilter = Builders<ConfigurationSetting>.Filter.Regex(
+                    c => c.Name, new BsonRegularExpression(search, "i"));
                 filter = Builders<ConfigurationSetting>.Filter.And(filter, searchFilter);
             }
         
             var totalRecords = await _configCollection.CountDocumentsAsync(filter);
-            var items = await _configCollection.Find(filter)
+            
+            var items = await _configCollection
+                .Find(filter)
                 .Skip((page - 1) * size)
                 .Limit(size)
                 .ToListAsync();
         
-            return new PagedResult<ConfigurationSetting>
-            {
-                Items = items,
-                TotalPages = (int)Math.Ceiling(totalRecords / (double)size),
-                TotalItems = (int)totalRecords
-            };
+            return new PagedResult<ConfigurationSetting>(items, (int)totalRecords, page, size);
         }
+
 
 
         public async Task<IEnumerable<ConfigurationSetting>> GetAll()
@@ -139,19 +142,15 @@ namespace ConfigManager.Infrastructure.Persistence
 
             var sampleData = new List<ConfigurationSetting>
             {
-                new ConfigurationSetting("SiteName", SettingType.String, "example.com", true, applicationName, null),
-                new ConfigurationSetting("IsFeatureXEnabled", SettingType.Boolean, "true", true, applicationName, null),
-                new ConfigurationSetting("MaxUsers", SettingType.Integer, "100", true, applicationName, null)
+                new ConfigurationSetting("SiteName", SettingType.String, "soty.io", true, "SERVICE-A", null),
+                new ConfigurationSetting("IsFeatureXEnabled", SettingType.Boolean, "1", true, "SERVICE-B", null),
+                new ConfigurationSetting("MaxUsers", SettingType.Integer, "50", false, "SERVICE-A   ", null)
             };
 
             sampleData.AddRange(faker.Generate(20)); 
 
             await _configCollection.InsertManyAsync(sampleData);
         }
-
-
-
-
 
         public async Task<IEnumerable<string>> GetAllApplicationNamesAsync()
         {

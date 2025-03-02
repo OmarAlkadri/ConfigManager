@@ -12,12 +12,18 @@ namespace ConfigManager.Infrastructure.Messaging
         private IConnection? _connection = null;
         private IChannel? _channel = null;
         private readonly string _exchangeName = "config_updates";
+        private readonly string _rabbitMqUrl;
+
+        public RabbitMqMessageBroker(string rabbitMqUrl)
+        {
+            _rabbitMqUrl = rabbitMqUrl ?? throw new ArgumentNullException(nameof(rabbitMqUrl), "RabbitMQ URL cannot be null or empty.");
+        }
 
         public async Task InitializeAsync()
         {
             try
             {
-                _connection = await RabbitMqConnectionManager.GetConnectionAsync();
+                _connection = await RabbitMqConnectionManager.GetConnectionAsync(_rabbitMqUrl);
                 _channel = await _connection.CreateChannelAsync();
                 await _channel.ExchangeDeclareAsync(_exchangeName, ExchangeType.Fanout, durable: true, autoDelete: false);
             }

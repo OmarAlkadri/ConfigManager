@@ -6,10 +6,11 @@
     [Parameter] public EventCallback<ConfigurationSetting> OnSave { get; set; }
     [Parameter] public EventCallback OnClose { get; set; }
 
-    private string newApplicationName;
-    private string newName;
-    private string newValue;
-    private SettingType newType;
+    private string newApplicationName = string.Empty;
+    private string newName = string.Empty;
+    private string newValue = string.Empty;
+    private string errorMessage = string.Empty;
+    private SettingType newType = SettingType.String;
 }
 
 @if (IsOpen)
@@ -70,12 +71,11 @@
         if (SelectedConfig != null)
         {
             var updatedConfig = new ConfigurationSetting(
-            newApplicationName,
             newName,
             newType,
             newValue,
             SelectedConfig.IsActive,
-            SelectedConfig.ApplicationName,
+            newApplicationName,
             SelectedConfig._id
             );
 

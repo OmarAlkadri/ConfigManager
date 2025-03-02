@@ -1,5 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace ConfigManager.API.DependencyInjection
 {
@@ -7,7 +9,7 @@ namespace ConfigManager.API.DependencyInjection
     {
         public static IServiceCollection AddApiServices(this IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen(c =>
             {
