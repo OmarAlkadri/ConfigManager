@@ -19,8 +19,9 @@ namespace ConfigManager.Infrastructure.DependencyInjection
             var port = rabbitMqConfig["Port"] ?? "5672";
             var username = rabbitMqConfig["Username"] ?? "guest";
             var password = rabbitMqConfig["Password"] ?? "guest";
+            var VirtualHost = rabbitMqConfig["VirtualHost"] ?? "guest";
 
-            var rabbitMqUrl = $"amqp://{username}:{password}@{host}:{port}/";
+            var rabbitMqUrl = $"amqp://{username}:{password}@{host}:{port}/{VirtualHost}";
 
             Console.WriteLine($"[InfrastructureServiceRegistration] RabbitMQ URL: {rabbitMqUrl}");
 

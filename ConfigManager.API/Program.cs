@@ -76,7 +76,14 @@ builder.Services.AddSingleton<IConnection>(sp =>
         HostName = rabbitMqConfig["Host"],
         Port = int.Parse(rabbitMqConfig["Port"] ?? "5672"),
         UserName = rabbitMqConfig["Username"],
-        Password = rabbitMqConfig["Password"]
+        Password = rabbitMqConfig["Password"],
+        VirtualHost = rabbitMqConfig["VirtualHost"],
+        Ssl = new SslOption
+        {
+            Enabled = true,
+            ServerName = rabbitMqConfig["Host"], 
+            AcceptablePolicyErrors = System.Net.Security.SslPolicyErrors.None
+        }
     };
     
     return Task.Run(async () => await factory.CreateConnectionAsync()).GetAwaiter().GetResult();

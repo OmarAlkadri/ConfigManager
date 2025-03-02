@@ -21,9 +21,14 @@ namespace ConfigManager.Infrastructure.Messaging
 
             var factory = new ConnectionFactory
             {
-                Uri = new Uri(rabbitMqUrl)
+                Uri = new Uri(rabbitMqUrl),
+                Ssl = new SslOption
+                {
+                    Enabled = true,
+                    ServerName = new Uri(rabbitMqUrl).Host,
+                    AcceptablePolicyErrors = System.Net.Security.SslPolicyErrors.None
+                }
             };
-
             return _connection ??= await factory.CreateConnectionAsync();
         }
     }

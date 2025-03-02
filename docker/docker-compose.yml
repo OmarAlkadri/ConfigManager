@@ -1,39 +1,39 @@
 version: '3.8'
 
 services:
-  configmanager:
-    build:
-      context: ..
-      dockerfile: docker/Api.Dockerfile
-    container_name: configmanager_api
-    ports:
-      - "8081:8081"
-    restart: always
-    environment:
-      Application__Name: "SERVICE-A"
-      MongoDB__ConnectionString: "mongodb://mongo:27017"
-      CONFIG_MANAGER_PORT: "8081"
-      RabbitMQ__ConnectionString: "amqp://guest:guest@rabbitmq:5672/"
-    depends_on:
-      - mongo
-      - rabbitmq
-    networks:
-      - configmanager_network 
-
-  client:
-    build:
-      context: ..
-      dockerfile: docker/Client.Dockerfile
-    container_name: blazor_client
-    restart: always
-    ports:
-      - "5001:80"
-    depends_on:
-      - configmanager
-      - mongo
-      - rabbitmq
-    networks:
-      - configmanager_network  
+  #configmanager:
+  #  build:
+  #    context: ..
+  #    dockerfile: docker/Api.Dockerfile
+  #  container_name: configmanager_api
+  #  ports:
+  #    - "8081:8081"
+  #  restart: always
+  #  environment:
+  #    Application__Name: "SERVICE-A"
+  #    MongoDB__ConnectionString: "mongodb://mongo:27017"
+  #    CONFIG_MANAGER_PORT: "8081"
+  #    RabbitMQ__ConnectionString: "amqp://guest:guest@rabbitmq:5672/"
+  #  depends_on:
+  #    - mongo
+  #    - rabbitmq
+  #  networks:
+  #    - configmanager_network 
+#
+  #client:
+  #  build:
+  #    context: ..
+  #    dockerfile: docker/Client.Dockerfile
+  #  container_name: blazor_client
+  #  restart: always
+  #  ports:
+  #    - "5001:80"
+  #  depends_on:
+  #    - configmanager
+  #    - mongo
+  #    - rabbitmq
+  #  networks:
+  #    - configmanager_network  
 
   mongo:
     image: mongo:latest
