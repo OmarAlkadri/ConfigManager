@@ -63,3 +63,4 @@ appsettings*.json
 # Ignore bin/ and obj/ directories for all projects (including sub-projects)
 **/bin/
 **/obj/
+**/publish/

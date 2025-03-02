@@ -6,13 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="35.6.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.2" />
+    <PackageReference Include="MongoDB.Bson" Version="3.2.1" />
     <PackageReference Include="RabbitMQ.Client" Version="7.1.1" />
-    <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
+    <PackageReference Include="MongoDB.Driver" Version="3.2.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConfigManager.Application\ConfigManager.Application.csproj" />
     <ProjectReference Include="..\ConfigManager.Domain\ConfigManager.Domain.csproj" />
   </ItemGroup>
 </Project>

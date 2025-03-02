@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ConfigManager.Domain.Entities;
 using ConfigManager.Domain.ValueObjects;
+using ConfigManager.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
@@ -13,12 +14,12 @@ namespace ConfigManager.Tests.Controllers
 {
     public class ConfigurationControllerTests
     {
-        private readonly Mock<ConfigurationService> _mockService;
+        private readonly Mock<IConfigurationService> _mockService;
         private readonly ConfigurationController _controller;
 
         public ConfigurationControllerTests()
         {
-            _mockService = new Mock<ConfigurationService>(null!, null!);
+            _mockService = new Mock<IConfigurationService>(null!, null!);
             _controller = new ConfigurationController(_mockService.Object);
         }
 
@@ -36,13 +37,13 @@ namespace ConfigManager.Tests.Controllers
         }
 
         [Fact]
-        public async Task AddOrUpdate_ShouldReturnOk_WhenConfigurationIsAdded()
+        public async Task Add_ShouldReturnOk_WhenConfigurationIsAdded()
         {
             // Arrange
             var configDto = new ConfigurationController.ConfigurationDto("SiteName", SettingType.String, "example.com", true, "SERVICE-A");
 
             // Act
-            var result = await _controller.AddOrUpdate(configDto);
+            var result = await _controller.Add(configDto);
 
             // Assert
             result.Should().BeOfType<OkObjectResult>();

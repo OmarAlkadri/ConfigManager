@@ -1,37 +1,40 @@
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using ConfigManager.Domain.ValueObjects;
 
 namespace ConfigManager.Domain.Entities
 {
     public class ConfigurationSetting
     {
-        public Guid Id { get; private set; }
-        public string Name { get; private set; }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string _id { get; private set; } = ObjectId.GenerateNewId().ToString();
+
+        [BsonElement("name")]
+        public string Name { get; private set; } = string.Empty;
+
+        [BsonElement("type")]
         public SettingType Type { get; private set; }
-        public string Value { get; private set; }
-        public bool IsActive { get; private set; }
-        public string ApplicationName { get; private set; }
+
+        [BsonElement("value")]
+        public string Value { get; private set; } = string.Empty;
+
+        [BsonElement("isActive")]
+        public bool IsActive { get; private set; } = false;
+
+        [BsonElement("applicationName")]
+        public string ApplicationName { get; private set; } = string.Empty;
 
         private ConfigurationSetting() { }
 
-        public ConfigurationSetting(string name, SettingType type, string value, bool isActive, string applicationName)
+        public ConfigurationSetting( string name, SettingType type, string value, bool isActive, string applicationName,string? _id)
         {
-            Id = Guid.NewGuid();
+            this._id = string.IsNullOrEmpty(_id) ? ObjectId.GenerateNewId().ToString() : ObjectId.Parse(_id).ToString();
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Type = type;
             Value = value ?? throw new ArgumentNullException(nameof(value));
             IsActive = isActive;
             ApplicationName = applicationName ?? throw new ArgumentNullException(nameof(applicationName));
         }
-
-        public void UpdateValue(string newValue)
-        {
-            if (string.IsNullOrWhiteSpace(newValue))
-                throw new ArgumentException("Value cannot be empty.", nameof(newValue));
-
-            Value = newValue;
-        }
-
-        public void Deactivate() => IsActive = false;
-        public void Activate() => IsActive = true;
     }
 }

@@ -1,0 +1,85 @@
+@using ConfigManager.Domain.ValueObjects
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public ConfigurationSetting SelectedConfig { get; set; }
+    [Parameter] public EventCallback<ConfigurationSetting> OnSave { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private string newApplicationName;
+    private string newName;
+    private string newValue;
+    private SettingType newType;
+}
+
+@if (IsOpen)
+{
+    <div class="modal fade show d-block" id="editModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Configuration</h5>
+                    <button type="button" class="btn-close" @onclick="OnClose"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">ApplicationName</label>
+                        <input type="text" class="form-control" @bind="newApplicationName">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" @bind="newName">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Value</label>
+                        <input type="text" class="form-control" @bind="newValue">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Type</label>
+                        <select class="form-control" @bind="newType">
+                            @foreach (var type in Enum.GetValues(typeof(SettingType)))
+                            {
+                                <option value="@type">@type</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" @onclick="() => SaveChanges()">Save Changes</button>
+                    <button type="button" class="btn btn-secondary" @onclick="OnClose">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    protected override void OnParametersSet()
+    {
+        if (SelectedConfig != null)
+        {
+            newApplicationName = SelectedConfig.ApplicationName;
+            newName = SelectedConfig.Name;
+            newValue = SelectedConfig.Value;
+            newType = SelectedConfig.Type;
+        }
+    }
+
+    private async Task SaveChanges()
+    {
+        if (SelectedConfig != null)
+        {
+            var updatedConfig = new ConfigurationSetting(
+            newApplicationName,
+            newName,
+            newType,
+            newValue,
+            SelectedConfig.IsActive,
+            SelectedConfig.ApplicationName,
+            SelectedConfig._id
+            );
+
+            await OnSave.InvokeAsync(updatedConfig);
+        }
+    }
+}

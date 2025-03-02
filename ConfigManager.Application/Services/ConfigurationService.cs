@@ -1,100 +1,123 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Memory;
 using ConfigManager.Domain.Entities;
 using ConfigManager.Domain.Interfaces;
-using ConfigManager.Domain.ValueObjects;
-using ConfigManager.Domain.Repositories;
-using System.Collections.Concurrent;
+using ConfigManager.Domain.DTOs;
+using Microsoft.Extensions.Caching.Memory;
 
-
-public class ConfigurationService
+namespace ConfigManager.Application.Services
 {
-    private readonly IConfigurationRepository _configurationRepository;
-    private readonly IMessageBroker _messageBroker;
-    private readonly IMemoryCache _cache;
-    private readonly TimeSpan _cacheDuration = TimeSpan.FromMinutes(5);
-    private static readonly ConcurrentBag<string> _cacheKeys = new ConcurrentBag<string>();
-
-    public ConfigurationService(IConfigurationRepository configurationRepository, IMessageBroker messageBroker, IMemoryCache cache)
+    public class ConfigurationService : IConfigurationService
     {
-        _configurationRepository = configurationRepository ?? throw new ArgumentNullException(nameof(configurationRepository));
-        _messageBroker = messageBroker ?? throw new ArgumentNullException(nameof(messageBroker));
-        _cache = cache ?? throw new ArgumentNullException(nameof(cache));
-    }
+        private readonly IConfigurationRepository _configRepository;
+        private readonly IMessageBroker _messageBroker;
+        private readonly IMemoryCache _cache;
+        private readonly TimeSpan _cacheDuration = TimeSpan.FromMinutes(5);
 
-    public async Task<ConfigurationSetting?> GetConfigurationAsync(string name, string applicationName)
-    {
-        string cacheKey = $"config_{applicationName}_{name}";
-        if (!_cache.TryGetValue(cacheKey, out ConfigurationSetting? setting))
+        public ConfigurationService(IConfigurationRepository configRepository, IMessageBroker messageBroker, IMemoryCache cache)
         {
-            setting = await _configurationRepository.GetByNameAsync(name, applicationName);
-            if (setting != null)
+            _configRepository = configRepository;
+            _messageBroker = messageBroker;
+            _cache = cache;
+        }
+
+        public async Task SeedDataAsync(string? applicationName)
+        {
+            await _configRepository.SeedDataAsync(applicationName);
+        }
+
+        public async Task<ConfigurationSetting?> GetConfigurationByIdAsync(string id)
+        {
+            try
             {
-                _cache.Set(cacheKey, setting, _cacheDuration);
-                _cacheKeys.Add(cacheKey);
+                return await _configRepository.GetByIdAsync(id) ?? throw new Exception("Configuration not found.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error fetching configuration by ID: {ex.Message}");
+                throw;
             }
         }
-        return setting;
-    }
 
-    public async Task<IEnumerable<ConfigurationSetting>> GetAllConfigurationsAsync(string applicationName)
-    {
-        string cacheKey = $"config_all_{applicationName}";
-        if (!_cache.TryGetValue(cacheKey, out IEnumerable<ConfigurationSetting>? settings))
+        public async Task<IEnumerable<ConfigurationSetting>> GetAll()
         {
-            settings = await _configurationRepository.GetAllAsync(applicationName);
-            if (settings != null)
+            return await _configRepository.GetAll();
+        }
+
+        public async Task<IEnumerable<ConfigurationSetting>> GetAllConfigurationsAsync(string applicationName, string? search = null)
+        {
+            if (_cache.TryGetValue(applicationName, out IEnumerable<ConfigurationSetting> cachedConfigs))
             {
-                _cache.Set(cacheKey, settings, _cacheDuration);
-                _cacheKeys.Add(cacheKey);
+                return cachedConfigs;
+            }
+
+            var configurations = await _configRepository.GetAllAsync(applicationName);
+            configurations = configurations.Where(c => c.IsActive);
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                configurations = configurations.Where(c => c.Name.Contains(search, StringComparison.OrdinalIgnoreCase));
+            }
+
+            _cache.Set(applicationName, configurations, _cacheDuration);
+            return configurations;
+        }
+
+        public async Task<PagedResult<ConfigurationSetting>> GetAllConfigurationsAsyncPage(string applicationName, int page = 1, int size = 10, string? search = null)
+        {
+            return await _configRepository.GetAllByApplicationNamePage(applicationName, page, size, search);
+        }
+
+        public async Task Add(ConfigurationSetting setting)
+        {
+            try
+            {
+                await _configRepository.Add(setting);
+                _cache.Remove(setting.ApplicationName);
+                await _messageBroker.PublishConfigurationUpdateAsync($"Added: {setting.Name}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding configuration: {ex.Message}");
             }
         }
-        return settings ?? new List<ConfigurationSetting>();
-    }
 
-    public async Task AddOrUpdateConfigurationAsync(string name, SettingType type, string value, bool isActive, string applicationName)
-    {
-        var setting = new ConfigurationSetting(name, type, value, isActive, applicationName);
-        await _configurationRepository.AddOrUpdateAsync(setting);
-        await _messageBroker.PublishConfigurationUpdateAsync(name);
-
-        string cacheKey = $"config_{applicationName}_{name}";
-        _cache.Set(cacheKey, setting, _cacheDuration);
-        _cacheKeys.Add(cacheKey);
-
-        _cache.Remove($"config_all_{applicationName}");
-    }
-
-    public async Task DeleteConfigurationAsync(Guid id)
-    {
-        await _configurationRepository.DeleteAsync(id);
-        RemoveCacheEntriesStartingWith("config_"); 
-    }
-
-    private void RemoveCacheEntriesStartingWith(string prefix)
-    {
-        foreach (var key in _cacheKeys)
+        public async Task DeleteConfigurationAsync(string id)
         {
-            if (key.StartsWith(prefix))
+            try
             {
-                _cache.Remove(key);
+                var config = await _configRepository.GetByIdAsync(id);
+                if (config == null) return;
+                
+                await _configRepository.DeleteAsync(id);
+                _cache.Remove(config.ApplicationName);
+                await _messageBroker.PublishConfigurationUpdateAsync($"Deleted: {config.Name}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting configuration: {ex.Message}");
             }
         }
-    }
-}
 
-public static class MemoryCacheExtensions
-{
-    public static void RemoveWhereKeyStartsWith(this IMemoryCache cache, IEnumerable<string> keys, string keyPrefix)
-    {
-        foreach (var key in keys)
+        public async Task UpdateConfigurationAsync(string id, ConfigurationUpdateDto updatedSetting)
         {
-            if (key.StartsWith(keyPrefix))
+            try
             {
-                cache.Remove(key);
+                await _configRepository.UpdateAsync(id, updatedSetting);
+                _cache.Remove(updatedSetting.ApplicationName);
+                await _messageBroker.PublishConfigurationUpdateAsync($"Updated: {updatedSetting.Name}");
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error updating configuration: {ex.Message}");
+            }
+        }
+
+        public async Task<IEnumerable<string>> GetAllApplicationNamesAsync()
+        {
+            return await _configRepository.GetAllApplicationNamesAsync();
         }
     }
 }

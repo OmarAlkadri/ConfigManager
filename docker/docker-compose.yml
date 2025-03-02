@@ -7,14 +7,15 @@ services:
   #    dockerfile: docker/Dockerfile
   #  container_name: configmanager_api
   #  ports:
-  #    - "8080:8080"  # تأكد من مطابقة المنافذ هنا
+  #    - "8080:8080"
   #  restart: always
   #  environment:
   #    Application__Name: "SERVICE-A"
-  #    Redis__ConnectionString: "redis:6379"
+  #    MongoDB__ConnectionString: "mongodb://mongo:27017"
+  #    CONFIG_MANAGER_PORT: "8080"
   #    RabbitMQ__ConnectionString: "amqp://guest:guest@rabbitmq:5672/"
   #  depends_on:
-  #    - redis
+  #    - mongo
   #    - rabbitmq
   #  networks:
   #    - blazor_network
@@ -24,22 +25,25 @@ services:
   #    context: ..
   #    dockerfile: docker/Client.Dockerfile
   #  container_name: blazor_client
+  #  restart: always
   #  ports:
-  #    - "5001:80"  # أضف هذا السطر لتوجيه الواجهة إلى 8081
+  #    - "5001:80"
   #  depends_on:
   #    - configmanager
+  #    - mongo
+  #    - rabbitmq
   #  networks:
   #    - blazor_network
-  #  volumes:
-  #    - .:/app
 
-
-  redis:
-    image: redis:latest
-    container_name: redis
+  mongo:
+    image: mongo:latest
+    container_name: mongo
     restart: always
     ports:
-      - "6379:6379"
+      - "27017:27017"
+    environment:
+      MongoDB__ConnectionString: "mongodb://mongo:27017"
+      ConfigManagerDB: "ConfigManagerDB"
     networks:
       - blazor_network
 

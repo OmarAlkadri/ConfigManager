@@ -1,0 +1,38 @@
+@code {
+    [Parameter] public List<ConfigurationSetting> Configurations { get; set; } = new();
+    [Parameter] public EventCallback<ConfigurationSetting> OnEdit { get; set; }
+    [Parameter] public EventCallback<ConfigurationSetting> OnDelete { get; set; }
+}
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>App Name</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>Type</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var config in Configurations)
+            {
+                <tr>
+                    <td>@config.ApplicationName</td>
+                    <td>@config.Name</td>
+                    <td>@config.Value</td>
+                    <td>@config.Type</td>
+                    <td class="text-center">
+                        <button class="btn btn-warning btn-sm me-2" @onclick="() => OnEdit.InvokeAsync(config)">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm" @onclick="() => OnDelete.InvokeAsync(config)">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

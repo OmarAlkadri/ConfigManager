@@ -1,0 +1,28 @@
+<select class="form-select mb-3" @onchange="OnAppChanged">
+    <option value="" disabled selected>-- Select an Application --</option>
+    @foreach (var app in ApplicationNames)
+    {
+        <option value="@app" selected="@(app == SelectedAppName)">@app</option>
+    }
+</select>
+
+@code {
+    [Parameter] public List<string> ApplicationNames { get; set; } = new();
+    [Parameter] public string SelectedAppName { get; set; } = string.Empty;
+    [Parameter] public EventCallback<string> SelectedAppNameChanged { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (string.IsNullOrEmpty(SelectedAppName) && ApplicationNames.Any())
+        {
+            SelectedAppName = ApplicationNames.First();
+            await SelectedAppNameChanged.InvokeAsync(SelectedAppName);
+        }
+    }
+
+    private async Task OnAppChanged(ChangeEventArgs e)
+    {
+        var selectedApp = e.Value?.ToString() ?? string.Empty;
+        await SelectedAppNameChanged.InvokeAsync(selectedApp);
+    }
+}

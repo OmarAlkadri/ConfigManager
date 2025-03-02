@@ -1,149 +1,154 @@
-@page "/configurations"
+@page "/"
 @using ConfigManager.Domain.Entities
 @using ConfigManager.Domain.ValueObjects
 @inject HttpClient Http
 @inject IJSRuntime JS
+@using System.Net
+@using ConfigManager.Domain.DTOs
 
 <PageTitle>Configurations</PageTitle>
 
 <h3 class="text-primary">Configuration Settings</h3>
 
-<div class="mb-3 d-flex">
-    <input type="text" class="form-control me-2" placeholder="Search by name..." bind="@searchQuery" />
-    <button class="btn btn-primary" @onclick="SearchConfigurations">Search</button>
-</div>
+<ApplicationSelector ApplicationNames="applicationNames" SelectedAppName="@selectedAppName"
+    SelectedAppNameChanged="OnSelectedAppNameChanged" />
 
-@if (configurations == null)
-{
-    <div class="text-center mt-4">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div>
-}
-else
-{
-    <div class="table-responsive">
-        <table class="table table-bordered table-hover mt-3">
-            <thead class="table-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Value</th>
-                    <th>Type</th>
-                    <th class="text-center">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var config in configurations)
-                {
-                    <tr>
-                        <td>@config.Name</td>
-                        <td>@config.Value</td>
-                        <td>@config.Type</td>
-                        <td class="text-center">
-                            <button class="btn btn-warning btn-sm me-2" @onclick="() => OpenEditModal(config)">
-                                <i class="bi bi-pencil-square"></i> Edit
-                            </button>
-                            <button class="btn btn-danger btn-sm" @onclick="() => OpenDeleteModal(config)">
-                                <i class="bi bi-trash"></i> Delete
-                            </button>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-}
+<SearchBox SearchQuery="@searchQuery" OnSearchChanged="OnSearchQueryChanged" />
 
-@if (isEditModalOpen)
-{
-    <div class="modal fade show d-block" id="editModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Edit Configuration</h5>
-                    <button type="button" class="btn-close" @onclick="CloseEditModal"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label class="form-label">Name</label>
-                        <input type="text" class="form-control" bind="@selectedConfig.Name" disabled>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Value</label>
-                        <input type="text" class="form-control" bind="@selectedConfig.Value">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Type</label>
-                        <input type="text" class="form-control" bind="@selectedConfig.Type" disabled>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" @onclick="CloseEditModal">Close</button>
-                    <button type="button" class="btn btn-primary" @onclick="SaveChanges">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-}
+<LoadingSpinner IsLoading="@(configurations == null)" />
+
+<ConfigurationTable Configurations="configurations" OnEdit="OpenEditModal" OnDelete="OpenDeleteModal" />
+
+<Pagination TotalPages="totalPages" CurrentPage="currentPage" TotalItems="totalItems" PageSize="pageSize"
+    OnPageChanged="OnPageChanged" OnPageSizeChangedCallback="OnPageSizeChanged" />
+
+<EditModal SelectedConfig="selectedConfig" OnSave="SaveChanges" OnClose="CloseEditModal" IsOpen="isEditModalOpen" />
+<DeleteModal IsOpen="@isDeleteModalOpen" SelectedConfig="@selectedConfig" OnConfirm="ConfirmDelete"
+    OnCancel="CloseDeleteModal" />
 
 @code {
     private List<ConfigurationSetting> configurations = new();
-    private string errorMessage;
+    private List<string> applicationNames = new();
+    private string searchQuery = string.Empty;
+    private string selectedAppName = string.Empty;
     private bool isEditModalOpen = false;
     private bool isDeleteModalOpen = false;
-    private ConfigurationSetting selectedConfig = new("", SettingType.String, "", true, "SERVICE-A");
-    private string searchQuery = string.Empty;
+    private ConfigurationSetting? selectedConfig;
+    private CancellationTokenSource? _cts;
+    private string errorMessage;
+    private int totalItems = 0;
 
-    protected override async Task OnInitializedAsync()
+    private int currentPage = 1;
+    private int pageSize = 10;
+    private int totalPages = 1;
+
+    private async Task OnPageSizeChanged(int newSize)
     {
+        pageSize = newSize;
+        currentPage = 1;
         await LoadConfigurations();
     }
 
-    private async Task LoadConfigurations()
+    private async Task OnSelectedAppNameChanged(string newAppName)
+    {
+        selectedAppName = newAppName;
+        currentPage = 1;
+        await LoadConfigurations();
+    }
+
+    private async Task OnPageChanged(int newPage)
+    {
+        if (newPage > 0 && newPage <= totalPages)
+        {
+            currentPage = newPage;
+            await LoadConfigurations();
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadApplicationNames();
+        await LoadConfigurations();
+    }
+
+    private async Task LoadApplicationNames()
     {
         try
         {
-            var response = await Http.GetAsync("api/configurations/SERVICE-A");
+            var response = await Http.GetAsync("api/configurations/applications");
             if (response.IsSuccessStatusCode)
             {
-                configurations = await response.Content.ReadFromJsonAsync<List<ConfigurationSetting>>() ?? new();
+                applicationNames = await response.Content.ReadFromJsonAsync<List<string>>() ?? new();
+                if (applicationNames.Any())
+                {
+                    selectedAppName = applicationNames.First();
+                    await LoadConfigurations();
+                }
             }
             else
             {
-                errorMessage = $"Error fetching configurations: {response.StatusCode} {response.ReasonPhrase}";
+                SetErrorMessage("Error fetching application names.", response);
             }
         }
         catch (HttpRequestException ex)
         {
-            errorMessage = $"Error fetching configurations: {ex.Message}";
+            SetErrorMessage($"Error fetching application names: {ex.Message}");
         }
     }
 
-    private async Task SearchConfigurations()
+
+    private async Task LoadConfigurations()
     {
-        if (string.IsNullOrWhiteSpace(searchQuery))
+        if (string.IsNullOrWhiteSpace(selectedAppName))
         {
-            await LoadConfigurations();
+            configurations.Clear();
+            return;
         }
-        else
+
+        try
         {
-            try
+            var response = await Http.GetAsync($"api/configurations/app/page/{selectedAppName}?page={currentPage}&size={pageSize}");
+            if (response.IsSuccessStatusCode)
             {
-                configurations = await
-                Http.GetFromJsonAsync<List<ConfigurationSetting>>($"api/configurations/SERVICE-A?search={searchQuery}") ?? new();
+                var result = await response.Content.ReadFromJsonAsync<PagedResult<ConfigurationSetting>>();
+                configurations = result?.Items?.ToList() ?? new List<ConfigurationSetting>();
+                totalPages = result?.TotalPages ?? 1;
+                totalItems = result?.TotalItems ?? 0;
             }
-            catch (HttpRequestException ex)
+            else
             {
-                errorMessage = $"Error searching configurations: {ex.Message}";
+                SetErrorMessage("Error fetching configurations.", response);
             }
         }
+        catch (HttpRequestException ex)
+        {
+            SetErrorMessage($"Error fetching configurations: {ex.Message}");
+        }
+
+        StateHasChanged();
+    }
+
+    private async Task OnSearchQueryChanged(ChangeEventArgs e)
+    {
+        searchQuery = e.Value?.ToString() ?? string.Empty;
+        _cts?.Cancel();
+        _cts = new CancellationTokenSource();
+        var token = _cts.Token;
+        try
+        {
+            await Task.Delay(300, token);
+            if (!token.IsCancellationRequested)
+            {
+                await LoadConfigurations();
+            }
+        }
+        catch (TaskCanceledException) { }
     }
 
     private async Task OpenEditModal(ConfigurationSetting config)
     {
         selectedConfig = new ConfigurationSetting(config.Name, config.Type, config.Value, config.IsActive,
-        config.ApplicationName);
+        config.ApplicationName, config._id);
         isEditModalOpen = true;
         await JS.InvokeVoidAsync("showModal", "editModal");
         StateHasChanged();
@@ -152,21 +157,35 @@ else
     private async Task CloseEditModal()
     {
         isEditModalOpen = false;
-        await JS.InvokeVoidAsync("hideModal", "editModal");
+        try
+        {
+            await JS.InvokeVoidAsync("hideModal", "editModal");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error hiding modal: {ex.Message}");
+        }
         StateHasChanged();
     }
 
-    private async Task SaveChanges()
+    private async Task SaveChanges(ConfigurationSetting updatedConfig)
     {
-        var response = await Http.PutAsJsonAsync($"api/configurations/{selectedConfig.Name}", selectedConfig);
-        if (response.IsSuccessStatusCode)
+        if (updatedConfig != null)
         {
-            await LoadConfigurations();
-            await CloseEditModal();
+            var response = await Http.PutAsJsonAsync($"api/configurations/update/{selectedConfig._id}", updatedConfig);
+            if (response.IsSuccessStatusCode)
+            {
+                await LoadConfigurations();
+                await CloseEditModal();
+            }
+            else
+            {
+                SetErrorMessage("Error saving configuration.", response);
+            }
         }
     }
 
-    private void OpenDeleteModal(ConfigurationSetting config)
+    private async Task OpenDeleteModal(ConfigurationSetting config)
     {
         selectedConfig = config;
         isDeleteModalOpen = true;
@@ -175,13 +194,29 @@ else
 
     private async Task ConfirmDelete()
     {
-        var response = await Http.DeleteAsync($"api/configurations/{selectedConfig.Name}");
-        if (response.IsSuccessStatusCode)
+        if (selectedConfig != null)
         {
-            await LoadConfigurations();
+            var response = await Http.DeleteAsync($"api/configurations/{selectedConfig._id}");
+            if (response.IsSuccessStatusCode)
+            {
+                configurations.Remove(selectedConfig);
+                await LoadConfigurations();
+            }
+            else
+            {
+                SetErrorMessage("Error deleting configuration.", response);
+            }
         }
-        CloseDeleteModal();
+        isDeleteModalOpen = false;
+        StateHasChanged();
     }
+
+    private void SetErrorMessage(string message, HttpResponseMessage? response = null)
+    {
+        errorMessage = response != null ? $"{message} ({(int)response.StatusCode} {response.ReasonPhrase})" : message;
+        StateHasChanged();
+    }
+
 
     private void CloseDeleteModal()
     {

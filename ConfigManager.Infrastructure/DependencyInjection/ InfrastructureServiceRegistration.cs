@@ -1,25 +1,29 @@
-using ConfigManager.Domain.Repositories;
 using ConfigManager.Domain.Interfaces;
 using ConfigManager.Infrastructure.Messaging;
 using ConfigManager.Infrastructure.Persistence;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
+using MongoDB.Driver;
 
 namespace ConfigManager.Infrastructure.DependencyInjection
 {
     public static class InfrastructureServiceRegistration
     {
-        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, string applicationName)
+        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, string collectionName)
         {
-            services.AddSingleton<IConfigurationRepository>(provider =>
+            services.AddSingleton<IMessageBroker>(provider =>
             {
-                var repo = new RedisConfigurationRepository(applicationName);
-                Task.Run(() => repo.SeedDataAsync()); // تشغيل SeedData عند بدء التشغيل
-                return repo;
+                var messageBroker = new RabbitMqMessageBroker();
+                Task.Run(async () => await messageBroker.InitializeAsync()).Wait();
+                return messageBroker;
             });
 
-            services.AddSingleton<IMessageBroker, RabbitMqMessageBroker>();
-            services.AddTransient<ConfigurationService>();
+            services.AddSingleton<IConfigurationRepository>(provider =>
+            {
+                var mongoDatabase = provider.GetRequiredService<IMongoDatabase>();
+                var messageBroker = provider.GetRequiredService<IMessageBroker>();
+                return new MongoDbConfigurationRepository(mongoDatabase, collectionName, messageBroker);
+            });
 
             return services;
         }

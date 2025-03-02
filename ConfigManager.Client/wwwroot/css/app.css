@@ -101,3 +101,129 @@ a, .btn-link {
 code {
     color: #c02d76;
 }
+
+
+.pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pagination button {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.pagination button:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination button.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+    font-weight: bold;
+    pointer-events: none; 
+}
+
+.pagination button:disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.pagination button.dots {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: default;
+}
+
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+}
+
+.pagination-info select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination button {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.pagination button:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination button.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.pagination button:disabled {
+    background: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.pagination button.dots {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: default;
+}

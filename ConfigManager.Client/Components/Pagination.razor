@@ -1,0 +1,87 @@
+<div class="pagination-container">
+    <!-- Total items and page size selection on the left -->
+    <div class="pagination-info">
+        <select value="@PageSize" @onchange="OnPageSizeChanged">
+            @foreach (var size in PageSizeOptions)
+            {
+                <option value="@size">@size</option>
+            }
+        </select>
+        <span>Total Items: @TotalItems</span>
+    </div>
+
+    <!-- Pagination controls on the right -->
+    <div class="pagination">
+        @if (TotalPages > 1)
+        {
+            <button disabled="@(CurrentPage == 1)" @onclick="() => ChangePage(1)">«</button>
+            <button disabled="@(CurrentPage == 1)" @onclick="() => ChangePage(CurrentPage - 1)">‹</button>
+
+            @foreach (var page in GetPageNumbers())
+            {
+                if (page == -1 || page == -2)
+                {
+                    <button class="dots" disabled>...</button>
+                }
+                else
+                {
+                    <button class="@(page == CurrentPage ? "active" : "")" @onclick="() => ChangePage(page)">
+                        @(page)
+                    </button>
+                }
+            }
+
+            <button disabled="@(CurrentPage == TotalPages)" @onclick="() => ChangePage(CurrentPage + 1)">›</button>
+            <button disabled="@(CurrentPage == TotalPages)" @onclick="() => ChangePage(TotalPages)">»</button>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public int TotalPages { get; set; }
+    [Parameter] public int CurrentPage { get; set; }
+    [Parameter] public int TotalItems { get; set; }
+    [Parameter] public int PageSize { get; set; } = 10;
+    [Parameter] public EventCallback<int> OnPageChanged { get; set; }
+    [Parameter] public EventCallback<int> OnPageSizeChangedCallback { get; set; }
+
+    private List<int> PageSizeOptions { get; } = new() { 5, 10, 20, 50, 100 };
+
+    private async Task ChangePage(int newPage)
+    {
+        if (newPage >= 1 && newPage <= TotalPages)
+        {
+            await OnPageChanged.InvokeAsync(newPage);
+        }
+    }
+
+    private async Task OnPageSizeChanged(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int newSize))
+        {
+            PageSize = newSize;
+            await OnPageSizeChangedCallback.InvokeAsync(newSize);
+            StateHasChanged();
+        }
+    }
+
+
+    private List<int> GetPageNumbers()
+    {
+        List<int> pages = new() { 1 };
+
+        if (CurrentPage > 3)
+            pages.Add(-1); // Represents "..."
+
+        for (int i = Math.Max(2, CurrentPage - 1); i <= Math.Min(TotalPages - 1, CurrentPage + 1); i++)
+            pages.Add(i);
+
+        if (CurrentPage < TotalPages - 2)
+            pages.Add(-2); // Represents "..."
+
+        if (TotalPages > 1)
+            pages.Add(TotalPages);
+
+        return pages;
+    }
+}

@@ -1,0 +1,29 @@
+@using ConfigManager.Domain.Entities
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public ConfigurationSetting SelectedConfig { get; set; }
+    [Parameter] public EventCallback OnConfirm { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+}
+
+@if (IsOpen)
+{
+    <div class="modal fade show d-block" id="deleteModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Deletion</h5>
+                    <button type="button" class="btn-close" @onclick="OnCancel"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete the configuration <strong>@SelectedConfig.Name</strong>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="OnCancel">Cancel</button>
+                    <button type="button" class="btn btn-danger" @onclick="OnConfirm">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

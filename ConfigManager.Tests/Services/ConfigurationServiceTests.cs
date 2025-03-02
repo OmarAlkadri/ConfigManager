@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Moq;
 using Xunit;
 using FluentAssertions;
-using ConfigManager.Domain.Repositories;
 using ConfigManager.Domain.Interfaces;
 using ConfigManager.Domain.Entities;
 using ConfigManager.Domain.ValueObjects;
@@ -17,14 +16,14 @@ namespace ConfigManager.Tests.Services
         private readonly Mock<IConfigurationRepository> _mockRepository;
         private readonly Mock<IMessageBroker> _mockMessageBroker;
         private readonly Mock<IMemoryCache> _mockCache;
-        private readonly ConfigurationService _service;
+        private readonly IConfigurationService _service;
 
         public ConfigurationServiceTests()
         {
             _mockRepository = new Mock<IConfigurationRepository>();
             _mockMessageBroker = new Mock<IMessageBroker>();
             _mockCache = new Mock<IMemoryCache>();
-            _service = new ConfigurationService(_mockRepository.Object, _mockMessageBroker.Object, _mockCache.Object);
+            _service = new IConfigurationService(_mockRepository.Object, _mockMessageBroker.Object, _mockCache.Object);
         }
 
         [Fact]
