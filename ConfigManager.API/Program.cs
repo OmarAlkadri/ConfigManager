@@ -20,6 +20,8 @@ using Newtonsoft.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
+DotNetEnv.Env.Load();
+
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
@@ -28,7 +30,12 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
-var port = Environment.GetEnvironmentVariable("CONFIG_MANAGER_PORT") ?? "8081";
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddEnvironmentVariables();
+
+var port = builder.Configuration["CONFIG_MANAGER_PORT"] ?? "8081";
 builder.WebHost.UseUrls($"http://*:{port}");
 
 builder.Services.ConfigureHttpJsonOptions(options =>
@@ -55,6 +62,7 @@ builder.Services.Configure<IpRateLimitOptions>(options =>
 builder.Services.AddInMemoryRateLimiting();
 builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
 
+// MongoDB Configuration
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
     var mongoConnectionString = builder.Configuration["MongoDB:ConnectionString"];
@@ -68,6 +76,7 @@ builder.Services.AddScoped<IMongoDatabase>(sp =>
     return client.GetDatabase(databaseName ?? throw new ArgumentNullException("MongoDB DatabaseName is missing."));
 });
 
+// RabbitMQ Configuration
 builder.Services.AddSingleton<IConnection>(sp =>
 {
     var rabbitMqConfig = sp.GetRequiredService<IConfiguration>().GetSection("RabbitMQ");
@@ -80,19 +89,20 @@ builder.Services.AddSingleton<IConnection>(sp =>
         VirtualHost = rabbitMqConfig["VirtualHost"],
         Ssl = new SslOption
         {
-            Enabled = true,
-            ServerName = rabbitMqConfig["Host"], 
+            Enabled = bool.Parse(rabbitMqConfig["UseSsl"] ?? "true"),
+            ServerName = rabbitMqConfig["Host"],
             AcceptablePolicyErrors = System.Net.Security.SslPolicyErrors.None
         }
     };
-    
+
     return Task.Run(async () => await factory.CreateConnectionAsync()).GetAwaiter().GetResult();
 });
 
+// Health Checks
 builder.Services.AddHealthChecks()
     .AddMongoDb(sp => new MongoClient(builder.Configuration["MongoDB:ConnectionString"]!), name: "MongoDB")
     .AddRabbitMQ(sp => sp.GetRequiredService<IConnection>(), name: "RabbitMQ");
-    
+
 var mongoConnection = builder.Configuration["MongoDB:ConnectionString"] ?? throw new ArgumentNullException("MongoDB ConnectionString is missing.");
 var databaseName = builder.Configuration["MongoDB:DatabaseName"];
 var collectionName = builder.Configuration["MongoDB:CollectionName"] ?? "ConfigurationSettings";
@@ -103,13 +113,16 @@ if (string.IsNullOrEmpty(mongoConnection) || string.IsNullOrEmpty(applicationNam
     throw new InvalidOperationException("Missing required configuration values.");
 }
 
+// Inject Dependencies
 builder.Services.AddInfrastructureServices(builder.Configuration, collectionName);
 builder.Services.AddApplicationServices(builder.Configuration, collectionName);
 builder.Services.AddApiServices();
 
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// CORS
 var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>();
 var corsPolicy = "AllowAllOrigins";
 
@@ -133,12 +146,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors(corsPolicy);
-
 app.UseAuthorization();
 app.UseIpRateLimiting();
 app.MapControllers();
 app.UseSerilogRequestLogging();
 
+// Health Check Endpoint
 app.MapHealthChecks("/health", new HealthCheckOptions
 {
     ResponseWriter = async (context, report) =>
