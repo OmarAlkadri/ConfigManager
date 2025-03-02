@@ -78,8 +78,8 @@ if (string.IsNullOrEmpty(mongoConnection) || string.IsNullOrEmpty(rabbitMqConnec
     throw new InvalidOperationException("Missing required configuration values.");
 }
 
-builder.Services.AddInfrastructureServices(collectionName);
-builder.Services.AddApplicationServices(collectionName);
+builder.Services.AddInfrastructureServices(collectionName ?? "ConfigurationSettings");
+builder.Services.AddApplicationServices(collectionName ?? "ConfigurationSettings");
 builder.Services.AddApiServices();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -92,7 +92,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(corsPolicy, policy =>
     {
-        policy.WithOrigins(allowedOrigins)
+        policy.WithOrigins(allowedOrigins?? new string[] { "http://localhost:5000" ,"http://localhost:5001"})
               .AllowAnyMethod()
               .AllowAnyHeader();
     });

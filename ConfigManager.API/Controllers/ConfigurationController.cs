@@ -17,6 +17,14 @@ namespace ConfigManager.API.Controllers
             _configurationService = configurationService;
         }
 
+        [HttpGet("app/page/{applicationName}")]
+        public async Task<ActionResult<PagedResult<ConfigurationSetting>>> GetAllByApplicationName(string applicationName, [FromQuery] int page = 1, [FromQuery] int size = 10, [FromQuery] string? search = null)
+        {
+            var configurations = await _configurationService.GetAllConfigurationsAsyncPage(applicationName, page, size, search);
+            return Ok(configurations);
+        }
+
+
         [HttpGet("app/{applicationName}")]
         public async Task<ActionResult<IEnumerable<ConfigurationSetting>>> GetAllByApplicationName(string applicationName, [FromQuery] string? search = null)
         {
@@ -96,6 +104,7 @@ namespace ConfigManager.API.Controllers
                 var updatedConfig = new ConfigurationUpdateDto(
                     configDto.Name,
                     configDto.Type,
+                    configDto.ApplicationName,
                     configDto.Value
                 );
 
@@ -120,8 +129,8 @@ namespace ConfigManager.API.Controllers
             return Ok(applicationNames);
         }
 
-        [HttpPost("seed/{applicationName}")]
-        public async Task<IActionResult> SeedData(string applicationName)
+        [HttpPost("seed")]
+        public async Task<IActionResult> SeedData(string? applicationName)
         {
             try
             {
