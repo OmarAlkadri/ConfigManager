@@ -138,11 +138,16 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+
+app.UseRouting();
+app.UseEndpoints(endpoints =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConfigManager API v1"));
-}
+    endpoints.MapControllers();
+});
+
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConfigManager API v1"));
+
 
 app.UseHttpsRedirection();
 app.UseCors(corsPolicy);
