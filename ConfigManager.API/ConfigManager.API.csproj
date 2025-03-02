@@ -29,5 +29,4 @@
     <ProjectReference Include="..\ConfigManager.Domain\ConfigManager.Domain.csproj" />
     <ProjectReference Include="..\ConfigManager.Infrastructure\ConfigManager.Infrastructure.csproj" />
   </ItemGroup>
-
 </Project>

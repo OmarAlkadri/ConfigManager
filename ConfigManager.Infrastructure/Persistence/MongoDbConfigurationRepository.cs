@@ -144,7 +144,9 @@ namespace ConfigManager.Infrastructure.Persistence
             {
                 new ConfigurationSetting("SiteName", SettingType.String, "soty.io", true, "SERVICE-A", null),
                 new ConfigurationSetting("IsFeatureXEnabled", SettingType.Boolean, "1", true, "SERVICE-B", null),
-                new ConfigurationSetting("MaxUsers", SettingType.Integer, "50", false, "SERVICE-A   ", null)
+                new ConfigurationSetting("IsFeatureXEnabled1", SettingType.Boolean, "1", true, "SERVICE-B", null),
+                new ConfigurationSetting("MaxUsers", SettingType.Integer, "50", false, "SERVICE-A", null),
+                new ConfigurationSetting("MaxUsers1", SettingType.Integer, "50", false, "SERVICE-A", null)
             };
 
             sampleData.AddRange(faker.Generate(20)); 

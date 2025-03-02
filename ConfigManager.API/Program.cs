@@ -17,6 +17,8 @@ using MongoDB.Driver;
 using HealthChecks.MongoDb;
 using ConfigManager.Infrastructure.DependencyInjection;
 using Newtonsoft.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -28,6 +30,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 var port = Environment.GetEnvironmentVariable("CONFIG_MANAGER_PORT") ?? "8081";
 builder.WebHost.UseUrls($"http://*:{port}");
+
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+    options.SerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+});
 
 builder.Host.UseSerilog();
 

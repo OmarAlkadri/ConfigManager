@@ -1,9 +1,10 @@
+@using ConfigManager.Domain.DTOs
 @using ConfigManager.Domain.ValueObjects
 
 @code {
     [Parameter] public bool IsOpen { get; set; }
     [Parameter] public ConfigurationSetting SelectedConfig { get; set; }
-    [Parameter] public EventCallback<ConfigurationSetting> OnSave { get; set; }
+    [Parameter] public EventCallback<ConfigurationUpdateDto> OnSave { get; set; }
     [Parameter] public EventCallback OnClose { get; set; }
 
     private string newApplicationName = string.Empty;
@@ -70,14 +71,11 @@
     {
         if (SelectedConfig != null)
         {
-            var updatedConfig = new ConfigurationSetting(
+            var updatedConfig = new ConfigurationUpdateDto(
             newName,
             newType,
             newValue,
-            SelectedConfig.IsActive,
-            newApplicationName,
-            SelectedConfig._id
-            );
+            newApplicationName);
 
             await OnSave.InvokeAsync(updatedConfig);
         }

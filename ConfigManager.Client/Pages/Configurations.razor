@@ -6,6 +6,7 @@
 @using System.Net
 @using ConfigManager.Domain.DTOs
 @using Newtonsoft.Json
+@using System.Text
 
 <PageTitle>Configurations</PageTitle>
 
@@ -66,6 +67,10 @@
     }
 
     protected override async Task OnInitializedAsync()
+    {
+        Init();
+    }
+    private async void Init()
     {
         await LoadApplicationNames();
         await LoadConfigurations();
@@ -169,14 +174,17 @@
         StateHasChanged();
     }
 
-    private async Task SaveChanges(ConfigurationSetting updatedConfig)
+    private async Task SaveChanges(ConfigurationUpdateDto updatedConfig)
     {
         if (updatedConfig != null)
         {
-            var response = await Http.PutAsJsonAsync($"api/configurations/update/{selectedConfig._id}", updatedConfig);
+            var json = JsonConvert.SerializeObject(updatedConfig);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await Http.PutAsync($"api/configurations/update/{selectedConfig._id}", content);
+
             if (response.IsSuccessStatusCode)
             {
-                await LoadConfigurations();
+                Init();
                 await CloseEditModal();
             }
             else
@@ -185,6 +193,7 @@
             }
         }
     }
+
 
     private async Task OpenDeleteModal(ConfigurationSetting config)
     {

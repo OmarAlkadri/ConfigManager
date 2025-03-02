@@ -84,7 +84,6 @@ namespace ConfigManager.API.Controllers
 
         [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(string id, [FromBody] ConfigurationUpdateDto configDto)
-
         {
             try
             {
@@ -104,8 +103,8 @@ namespace ConfigManager.API.Controllers
                 var updatedConfig = new ConfigurationUpdateDto(
                     configDto.Name,
                     configDto.Type,
-                    configDto.ApplicationName,
-                    configDto.Value
+                    configDto.Value,
+                    configDto.ApplicationName
                 );
 
                 await _configurationService.UpdateConfigurationAsync(id, updatedConfig);

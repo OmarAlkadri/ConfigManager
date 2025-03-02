@@ -14,7 +14,7 @@ namespace ConfigManager.Domain.Entities
         public string Name { get; private set; } = string.Empty;
 
         [BsonElement("type")]
-        public SettingType Type { get; private set; }
+        public SettingType Type { get; private set; } = SettingType.String;
 
         [BsonElement("value")]
         public string Value { get; private set; } = string.Empty;
