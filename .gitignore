@@ -59,3 +59,4 @@ appsettings*.json
 **/bin/
 **/obj/
 **/publish/
+**.env
