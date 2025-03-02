@@ -50,11 +50,6 @@ Migrations/
 .idea/
 *.sln.DotSettings.user
 
-# Docker
-.dockerignore
-**/[Dd]ockerfile
-**/[Dd]ocker*
-
 # Secrets and configuration
 secrets.json
 appsettings*.json
