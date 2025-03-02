@@ -2,10 +2,11 @@
     [Parameter] public List<ConfigurationSetting> Configurations { get; set; } = new();
     [Parameter] public EventCallback<ConfigurationSetting> OnEdit { get; set; }
     [Parameter] public EventCallback<ConfigurationSetting> OnDelete { get; set; }
+    [Parameter] public bool IsLoading { get; set; } = false;
 }
 
 <div class="table-responsive">
-    <table class="table table-bordered table-hover mt-3">
+    <table class="table table-bordered table-hover mt-3 mb-0">
         <thead class="table-dark">
             <tr>
                 <th>App Name</th>
@@ -16,23 +17,57 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var config in Configurations)
+            @if (IsLoading)
             {
                 <tr>
-                    <td>@config.ApplicationName</td>
-                    <td>@config.Name</td>
-                    <td>@config.Value</td>
-                    <td>@config.Type</td>
-                    <td class="text-center">
-                        <button class="btn btn-warning btn-sm me-2" @onclick="() => OnEdit.InvokeAsync(config)">
-                            <i class="bi bi-pencil-square"></i> Edit
-                        </button>
-                        <button class="btn btn-danger btn-sm" @onclick="() => OnDelete.InvokeAsync(config)">
-                            <i class="bi bi-trash"></i> Delete
-                        </button>
+                    <td colspan="5" class="text-center">
+                        <span class="spinner-border" role="status" aria-hidden="true"></span>
                     </td>
                 </tr>
+            }
+            else
+            {
+                @foreach (var config in Configurations)
+                {
+                    <tr>
+                        <td>@config.ApplicationName</td>
+                        <td>@config.Name</td>
+                        <td>@config.Value</td>
+                        <td>@config.Type</td>
+                        <td class="text-center">
+                            <button class="btn btn-warning btn-sm me-2" @onclick="async () => await HandleEdit(config)">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </button>
+                            <button class="btn btn-danger btn-sm" @onclick="async () => await HandleDelete(config)">
+                                <i class="bi bi-trash"></i> Delete
+                            </button>
+                        </td>
+                    </tr>
+                }
             }
         </tbody>
     </table>
 </div>
+
+@code {
+    private async Task LoadConfigurations()
+    {
+        IsLoading = true;
+        StateHasChanged();
+
+        await Task.Delay(500); // Simulating API call
+
+        IsLoading = false;
+        StateHasChanged();
+    }
+
+    private async Task HandleEdit(ConfigurationSetting config)
+    {
+        await OnEdit.InvokeAsync(config);
+    }
+
+    private async Task HandleDelete(ConfigurationSetting config)
+    {
+        await OnDelete.InvokeAsync(config);
+    }
+}

@@ -160,7 +160,6 @@ app.MapHealthChecks("/health", new HealthCheckOptions
 
 app.UseSwagger();
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ConfigManager API v1"));
-https://configmanager.onrender.com/
 
 app.UseHttpsRedirection();
 app.UseCors(corsPolicy);

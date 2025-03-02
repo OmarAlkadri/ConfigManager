@@ -1,28 +1,44 @@
-<select class="form-select mb-3" @onchange="OnAppChanged">
-    <option value="" disabled selected>-- Select an Application --</option>
-    @foreach (var app in ApplicationNames)
-    {
-        <option value="@app" selected="@(app == SelectedAppName)">@app</option>
-    }
-</select>
+@if (IsLoadingAppName)
+{
+    <div class="d-flex justify-content-center mb-2">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    <select class="form-select mb-3" @onchange="OnAppChanged">
+        <option value="" disabled selected>-- Select an Application --</option>
+        @foreach (var app in ApplicationNames)
+        {
+            <option value="@app" selected="@(app == SelectedAppName)">@app</option>
+        }
+    </select>
+}
 
 @code {
     [Parameter] public List<string> ApplicationNames { get; set; } = new();
     [Parameter] public string SelectedAppName { get; set; } = string.Empty;
     [Parameter] public EventCallback<string> SelectedAppNameChanged { get; set; }
 
+    [Parameter] public bool IsLoadingAppName { get; set; } = false;
+
     protected override async Task OnParametersSetAsync()
     {
-        if (string.IsNullOrEmpty(SelectedAppName) && ApplicationNames.Any())
+        if (ApplicationNames.Any())
         {
-            SelectedAppName = ApplicationNames.First();
-            await SelectedAppNameChanged.InvokeAsync(SelectedAppName);
+            if (string.IsNullOrEmpty(SelectedAppName))
+            {
+                SelectedAppName = ApplicationNames.First();
+                await SelectedAppNameChanged.InvokeAsync(SelectedAppName);
+            }
         }
     }
 
     private async Task OnAppChanged(ChangeEventArgs e)
     {
-        var selectedApp = e.Value?.ToString() ?? string.Empty;
-        await SelectedAppNameChanged.InvokeAsync(selectedApp);
+        SelectedAppName = e.Value?.ToString() ?? string.Empty;
+        await SelectedAppNameChanged.InvokeAsync(SelectedAppName);
     }
 }

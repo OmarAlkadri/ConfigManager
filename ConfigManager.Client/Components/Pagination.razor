@@ -12,7 +12,7 @@
 
     <!-- Pagination controls on the right -->
     <div class="pagination">
-        @if (TotalPages > 1)
+        @if (TotalPages >= 1)
         {
             <button disabled="@(CurrentPage == 1)" @onclick="() => ChangePage(1)">«</button>
             <button disabled="@(CurrentPage == 1)" @onclick="() => ChangePage(CurrentPage - 1)">‹</button>

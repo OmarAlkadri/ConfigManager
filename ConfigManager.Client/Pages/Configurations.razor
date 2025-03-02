@@ -13,13 +13,14 @@
 <h3 class="text-primary">Configuration Settings</h3>
 
 <ApplicationSelector ApplicationNames="applicationNames" SelectedAppName="@selectedAppName"
-    SelectedAppNameChanged="OnSelectedAppNameChanged" />
+    SelectedAppNameChanged="OnSelectedAppNameChanged" IsLoadingAppName="isLoadingAppName" />
 
 <SearchBox SearchQuery="@searchQuery" OnSearchChanged="OnSearchQueryChanged" />
 
 <LoadingSpinner IsLoading="@(configurations == null)" />
 
-<ConfigurationTable Configurations="configurations" OnEdit="OpenEditModal" OnDelete="OpenDeleteModal" />
+<ConfigurationTable Configurations="configurations" OnEdit="OpenEditModal" OnDelete="OpenDeleteModal"
+    IsLoading="isLoading" />
 
 <Pagination TotalPages="totalPages" CurrentPage="currentPage" TotalItems="totalItems" PageSize="pageSize"
     OnPageChanged="OnPageChanged" OnPageSizeChangedCallback="OnPageSizeChanged" />
@@ -35,6 +36,8 @@
     private string selectedAppName = string.Empty;
     private bool isEditModalOpen = false;
     private bool isDeleteModalOpen = false;
+    private bool isLoading = false;
+    private bool isLoadingAppName = false;
     private ConfigurationSetting? selectedConfig;
     private CancellationTokenSource? _cts;
     private string errorMessage;
@@ -70,6 +73,7 @@
     {
         Init();
     }
+
     private async void Init()
     {
         await LoadApplicationNames();
@@ -80,14 +84,16 @@
     {
         try
         {
+            isLoadingAppName = true;
+            StateHasChanged();
+
             var response = await Http.GetAsync("api/configurations/applications");
             if (response.IsSuccessStatusCode)
             {
                 applicationNames = await response.Content.ReadFromJsonAsync<List<string>>() ?? new();
-                if (applicationNames.Any())
+                if (applicationNames.Any() && string.IsNullOrEmpty(selectedAppName))
                 {
                     selectedAppName = applicationNames.First();
-                    await LoadConfigurations();
                 }
             }
             else
@@ -99,7 +105,13 @@
         {
             SetErrorMessage($"Error fetching application names: {ex.Message}");
         }
+        finally
+        {
+            isLoadingAppName = false;
+            StateHasChanged();
+        }
     }
+
 
     private async Task LoadConfigurations()
     {
@@ -111,6 +123,8 @@
 
         try
         {
+            isLoading = true;
+            StateHasChanged();
             var response = await
             Http.GetAsync($"api/configurations/app/page/{selectedAppName}?page={currentPage}&size={pageSize}&search={searchQuery}");
             if (response.IsSuccessStatusCode)
@@ -130,8 +144,11 @@
         {
             SetErrorMessage($"Error fetching configurations: {ex.Message}");
         }
-
-        StateHasChanged();
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
     }
 
     private async Task OnSearchQueryChanged(string query)
@@ -226,7 +243,6 @@
         errorMessage = response != null ? $"{message} ({(int)response.StatusCode} {response.ReasonPhrase})" : message;
         StateHasChanged();
     }
-
 
     private void CloseDeleteModal()
     {
