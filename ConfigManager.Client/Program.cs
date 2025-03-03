@@ -11,6 +11,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 var port = Environment.GetEnvironmentVariable("CONFIG_MANAGER_PORT") ?? "8081";
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri($"http://localhost:{port}") });
 
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://configmanager.onrender.com/") });
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://configmanager.onrender.com") });
 
 await builder.Build().RunAsync();
